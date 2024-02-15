@@ -15,6 +15,8 @@ export default function Home() {
     <main>
       <List />
       <List />
+      <List />
     </main>
+    
   );
 }

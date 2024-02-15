@@ -22,7 +22,7 @@
   gap: 4px;
 }
 .decoration {
-  position: fixed;
+  position: sticky;
   background-color: #dbd4cc7f;
   top: 0;
   left: 0;

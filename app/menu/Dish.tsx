@@ -25,7 +25,7 @@ export default function Dish({
         className={styles.image}
         alt="platillo"
         src={image}
-        width={240}
+        width={200}
         height={300}
       />
       <div>

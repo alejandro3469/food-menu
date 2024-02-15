@@ -6,6 +6,7 @@
 
 .image {
   overflow: visible;
+  min-width: 200px;
 }
 .name {
   font-size: 16px;

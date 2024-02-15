@@ -7,7 +7,7 @@ export const roboto_slab = Open_Sans({ subsets: ["latin"], display: "swap" });
 export default function List() {
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>
-        <span className={styles.decoration} />
+      <span className={styles.decoration} />
       <h2 className={styles.title}>Mariscos</h2>
       <ul>
         <li>
@@ -18,6 +18,7 @@ export default function List() {
             description={
               "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate"
             }
+            height={1}
           />
         </li>
         <li>
@@ -28,6 +29,7 @@ export default function List() {
             description={
               "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate"
             }
+            height={1}
           />
         </li>
         <li>
@@ -38,6 +40,7 @@ export default function List() {
             description={
               "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate"
             }
+            height={1}
           />
         </li>
         <li>
@@ -48,6 +51,7 @@ export default function List() {
             description={
               "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate"
             }
+            height={1}
           />
         </li>
       </ul>

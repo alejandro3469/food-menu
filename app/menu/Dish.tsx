@@ -10,11 +10,13 @@ export default function Dish({
   name,
   prize,
   description,
+  height,
 }: {
   image: string;
   name: string;
   prize: string;
   description: string;
+  height: number;
 }) {
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>
@@ -23,8 +25,8 @@ export default function Dish({
         className={styles.image}
         alt="platillo"
         src={image}
-        width={200}
-        height={200}
+        width={240}
+        height={300}
       />
       <div>
         <h3 className={styles.name}>{name}</h3>

@@ -6,7 +6,11 @@ export const roboto_slab = Open_Sans({ subsets: ["latin"], display: "swap" });
 
 import { FaShrimp } from "react-icons/fa6";
 
-export default function List() {
+export default function List({
+  title
+}: {
+  title: string;
+}) {
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>
       <span className={styles.decoration} />
@@ -14,7 +18,7 @@ export default function List() {
       <h2 className={styles.title}>
         <span className={styles.icon_title}>
           <FaShrimp />
-          Mariscos
+          {title}
         </span>{" "}
         <span className={styles.items}>{"(4 platillos)"}</span>
       </h2>

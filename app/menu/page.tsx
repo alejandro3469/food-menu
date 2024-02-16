@@ -13,11 +13,10 @@ const playfairdisplay = Playfair_Display({
 export default function Home() {
   return (
     <main>
-      <List />
-      <List />
-      <List />
-      <List />
+      <List title={"Mariscos"} />
+      <List title={"Pozole"} />
+      <List title={"Bebidas"} />
+      <List title={"Postres"} />
     </main>
-    
   );
 }

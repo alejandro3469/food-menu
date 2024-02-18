@@ -11,12 +11,83 @@ const playfairdisplay = Playfair_Display({
 });
 
 export default function Home() {
+  const data = [
+    {
+      name: "Mariscos",
+      items: [
+        {
+          item: "Empanada de camarón",
+          cost: "65.00",
+          image: "/camaron.jpg",
+          description:
+            "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate",
+        },
+        {
+          item: "Caldo de camarón",
+          cost: "65.00",
+          image: "/caldo.jpg",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        },
+        {
+          item: "Filete de pescado",
+          cost: "65.00",
+          image: "/filete.jpg",
+          description:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+        },
+        {
+          item: "Tostada de camarón",
+          cost: "10.00",
+          image: "/tostada.jpg",
+          description:
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        },
+      ],
+    },
+    {
+      name: "Bebidas",
+      items: [
+        {
+          item: "Agua fresca (500ml)",
+          cost: "20.00",
+          image: "/water.jpg",
+          description:
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        },
+        {
+          item: "Refresco (600ml)",
+          cost: "20.00",
+          image: "/soda.jpg",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        },
+        {
+          item: "Café",
+          cost: "15.00",
+          image: "/coffee.jpg",
+          description:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+        },
+        {
+          item: "Té",
+          cost: "10.00",
+          image: "/tea.jpg",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        },
+      ],
+    },
+  ];
+
+  console.log(data);
+
   return (
     <main>
-      <List title={"Mariscos"} />
-      <List title={"Pozole"} />
-      <List title={"Bebidas"} />
-      <List title={"Postres"} />
+      <List title={data[0].name} category={data[0].items} />
+      <List title={data[1].name} category={data[1].items} />
+      <List title={data[0].name} category={data[0].items} />
+      <List title={data[1].name} category={data[1].items} />
     </main>
   );
 }

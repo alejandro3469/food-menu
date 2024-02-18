@@ -11,7 +11,7 @@ export default function List({
   category,
 }: {
   title: string;
-  category: String[];
+  category: [{ item: string; cost: string; image: string; description: string }];
 }) {
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>

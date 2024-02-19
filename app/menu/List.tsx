@@ -5,13 +5,16 @@ import { Open_Sans } from "next/font/google";
 export const roboto_slab = Open_Sans({ subsets: ["latin"], display: "swap" });
 
 import { FaShrimp } from "react-icons/fa6";
+import { GiSodaCan } from "react-icons/gi";
+import { TbSoup } from "react-icons/tb";
+import { LuCakeSlice } from "react-icons/lu";
 
 export default function List({
   title,
   category,
 }: {
   title: string;
-  category: any[]
+  category: any[];
 }) {
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>
@@ -19,7 +22,10 @@ export default function List({
 
       <h2 className={styles.title}>
         <span className={styles.icon_title}>
-          <FaShrimp />
+          {title === "Mariscos" && <FaShrimp />}
+          {title === "Bebidas" && <GiSodaCan />}
+          {title === "Pozole" && <TbSoup />}
+          {title === "Postres" && <LuCakeSlice />}
           {title}
         </span>{" "}
         <span className={styles.items}>{"(4 platillos)"}</span>

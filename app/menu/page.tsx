@@ -117,6 +117,7 @@ export default function Home() {
 
   return (
     <main>
+      <div className="cats_nav">{data.map((category, index) => (<a key={index} href={`#${category.name}`}>{category.name}</a>))}</div>
       <List title={data[0].name} category={data[0].items} />
       <List title={data[1].name} category={data[1].items} />
       <List title={data[2].name} category={data[2].items} />

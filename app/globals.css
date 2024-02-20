@@ -11,6 +11,26 @@
   padding: 0;
 }
 
+.cats_nav {
+  display: flex;
+  gap: 16px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  font-size: 16px;
+  z-index: 100;
+}
+.cats_nav a {
+  padding: 16px;
+}
+.cats_nav a:hover {
+  background-color: rgb(241, 241, 241);
+}
+
 body {
   display: flex;
   flex-direction: column;

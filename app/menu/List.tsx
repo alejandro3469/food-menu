@@ -17,7 +17,7 @@ export default function List({
   category: any[];
 }) {
   return (
-    <div className={`${styles.container} ${roboto_slab.className}`}>
+    <div id={title} className={`${styles.container} ${roboto_slab.className}`}>
       <span className={styles.decoration} />
 
       <h2 className={styles.title}>

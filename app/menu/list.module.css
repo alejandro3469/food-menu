@@ -30,7 +30,7 @@
 }
 .decoration {
   position: fixed;
-  background-color: #dbd4cc7f;
+  background-color: none;
   top: 0;
   left: 0;
   width: 100%;

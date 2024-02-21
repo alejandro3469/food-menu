@@ -33,6 +33,9 @@ html {
 .cats_nav a:hover {
   color: burlywood;
 }
+.lists {
+  margin-top: 48px;
+}
 
 body {
   display: flex;

@@ -31,7 +31,7 @@ export default function Dish({
       <div>
         <h3 className={styles.name}>{name}</h3>
         <div className={styles.prize}>${prize}</div>
-        {/*<p>{description}</p>*/}
+        <p className={styles.desctiption}>{description}</p>
       </div>
     </div>
   );

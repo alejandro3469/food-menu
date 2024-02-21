@@ -3,7 +3,11 @@
   flex-direction: column;
   gap: 8px;
 }
-
+.image_container {
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  overflow: hidden;
+}
 .image {
   overflow: visible;
   min-width: 200px;

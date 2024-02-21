@@ -21,13 +21,15 @@ export default function Dish({
   return (
     <div className={`${styles.container} ${roboto_slab.className}`}>
       <span className={styles.extra_square} />
-      <Image
-        className={styles.image}
-        alt="platillo"
-        src={image}
-        width={200}
-        height={300}
-      />
+      <div className={styles.image_container}>
+        <Image
+          className={styles.image}
+          alt="platillo"
+          src={image}
+          width={200}
+          height={300}
+        />
+      </div>
       <div>
         <h3 className={styles.name}>{name}</h3>
         <div className={styles.prize}>${prize}</div>

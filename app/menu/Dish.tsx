@@ -32,7 +32,21 @@ export default function Dish({
       </div>
       <div>
         <h3 className={styles.name}>{name}</h3>
-        <div className={styles.prize}>${prize}</div>
+        <div className={styles.prize}>
+          {prize.length === 2 && prize[0] && (
+            <>
+              <div>
+                <span>Chico </span>
+                <span>${prize[0]}</span>
+              </div>
+              <div>
+                <span>Grande </span>
+                <span>${prize[1]}</span>
+              </div>
+            </>
+          )}
+          {prize.length === 1 && prize[0] && <>${prize}</>}
+        </div>
         <p className={styles.desctiption}>{description}</p>
       </div>
     </div>

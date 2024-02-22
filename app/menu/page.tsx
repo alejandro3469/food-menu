@@ -17,14 +17,14 @@ export default function Home() {
       items: [
         {
           item: "Empanada de camarón",
-          cost: "65.00",
+          cost: ["65.00"],
           image: "/camaron.jpg",
           description:
             "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate",
         },
         {
           item: "Filete de pescado",
-          cost: "65.00",
+          cost: ["65.00"],
           image: "/filete.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
@@ -32,14 +32,14 @@ export default function Home() {
 
         {
           item: "Tostada de camarón",
-          cost: "10.00",
+          cost: ["10.00"],
           image: "/tostada.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         },
         {
           item: "Caldo de camarón",
-          cost: "65.00",
+          cost: ["65.00"],
           image: "/caldo.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -51,28 +51,28 @@ export default function Home() {
       items: [
         {
           item: "Agua fresca (500ml)",
-          cost: "20.00",
+          cost: ["20.00"],
           image: "/water.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         },
         {
           item: "Refresco (600ml)",
-          cost: "20.00",
+          cost: ["20.00"],
           image: "/coke.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
         {
           item: "Café",
-          cost: "15.00",
+          cost: ["15.00"],
           image: "/coffee.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
         },
         {
           item: "Té",
-          cost: "10.00",
+          cost: ["10.00"],
           image: "/tea.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -85,7 +85,7 @@ export default function Home() {
       items: [
         {
           item: "Pozole grande",
-          cost: "20.00",
+          cost: ["20.00", "70.00"],
           image: "/pozole.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
@@ -97,14 +97,14 @@ export default function Home() {
       items: [
         {
           item: "Pay de queso",
-          cost: "20.00",
+          cost: ["20.00"],
           image: "/cheesecake.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
         {
           item: "Pastel de chocolate",
-          cost: "20.00",
+          cost: ["20.00"],
           image: "/chocolatecake.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",

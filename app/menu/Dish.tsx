@@ -22,6 +22,7 @@ export default function Dish({
     <div className={`${styles.container} ${roboto_slab.className}`}>
       <span className={styles.extra_square} />
       <div className={styles.image_container}>
+        <p className={styles.desctiption}>{description}</p>
         <Image
           className={styles.image}
           alt="platillo"
@@ -47,7 +48,6 @@ export default function Dish({
           )}
           {prize.length === 1 && prize[0] && <>${prize}</>}
         </div>
-        <p className={styles.desctiption}>{description}</p>
       </div>
     </div>
   );

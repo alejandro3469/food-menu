@@ -9,6 +9,14 @@
   border-top-right-radius: 16px;
   border-bottom-left-radius: 16px;
   overflow: hidden;
+  position: relative;
+  transition: border-top-left-radius 0.3s, border-bottom-right-radius 0.3s;
+}
+.image_container:hover {
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 .image {
   overflow: visible;
@@ -26,5 +34,7 @@
 }
 .desctiption {
   width: 200px;
-  display: none;
+  position: absolute;
+  color: white;
+  padding: 16px;
 }

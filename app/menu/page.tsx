@@ -25,7 +25,7 @@ export default function Home() {
         {
           item: "Filete de pescado",
           cost: ["65.00"],
-          image: "/filete.jpg",
+          image: "/filete2.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
         },
@@ -40,7 +40,7 @@ export default function Home() {
         {
           item: "Caldo de camarón",
           cost: ["65.00"],
-          image: "/caldo.jpg",
+          image: "/caldo2.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },

@@ -18,7 +18,8 @@ html {
   display: flex;
   position: fixed;
   top: 0;
-  background-color: #ffd390;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   width: 100vw;
   align-items: center;
   justify-content: space-evenly;

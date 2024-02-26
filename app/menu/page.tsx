@@ -30,7 +30,21 @@ export default function Home() {
           description:
             "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate",
         },
+
         {
+          item: "Aguachile",
+          cost: ["65.00"],
+          image: "/aguachile.jpg",
+          description:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+        },  
+        {
+          item: "Coctel",
+          cost: ["65.00"],
+          image: "/coctel.jpg",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        },        {
           item: "Filete de pescado",
           cost: ["65.00"],
           image: "/filete2.jpg",

@@ -155,7 +155,7 @@ export default function Home() {
 
       <div className="banner">
         <h1 className={kalnia.className}>Ubicacion</h1>
-        <Link href={'https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9'}>
+        <Link className="maps_location" href={'https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9'}>
           La antigua, Tultepec, Estado de Mexico <FiExternalLink />
         </Link>
         <div className="bannerimage">

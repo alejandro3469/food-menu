@@ -19,6 +19,13 @@ html {
 .bannerimage {
   margin-top: 16px;
 }
+.maps_location {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 8px;
+  font-size: 18px;
+}
 
 .cats_nav {
   display: flex;

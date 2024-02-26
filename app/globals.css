@@ -25,6 +25,7 @@ html {
   white-space: nowrap;
   gap: 8px;
   font-size: 18px;
+  text-decoration: underline;
 }
 
 .cats_nav {

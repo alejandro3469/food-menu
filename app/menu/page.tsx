@@ -123,7 +123,7 @@ export default function Home() {
   return (
     <main>
       <div className="banner">
-        <h1 className={kalnia.className}>Cocina La antigua</h1>
+        <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <div className="bannerimage">
           <Image

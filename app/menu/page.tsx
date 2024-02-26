@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { DM_Serif_Display } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
-import Dish from "./Dish";
 import List from "./List";
 
 const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+
+import { Kalnia } from "next/font/google";
+const kalnia = Kalnia({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
@@ -117,6 +122,10 @@ export default function Home() {
 
   return (
     <main>
+      <div className="banner">
+        <h1 className={kalnia.className}>Cocina La antigua</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
       <div className="cats_nav">
         {data.map((category, index) => (
           <a key={index} href={`#${category.name}`}>

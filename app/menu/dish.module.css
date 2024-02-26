@@ -4,19 +4,19 @@
   gap: 8px;
 }
 .image_container {
-  border-top-left-radius: 60px;
+  /*border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-bottom-left-radius: 16px;*/
   overflow: hidden;
   position: relative;
-  transition: border-top-left-radius 0.3s, border-bottom-right-radius 0.3s;
+ /* transition: border-top-left-radius 0.3s, border-bottom-right-radius 0.3s; */
 }
 .image_container:hover {
-  border-top-left-radius: 16px;
+  /*border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-bottom-left-radius: 16px;*/
 }
 .image {
   overflow: visible;
@@ -42,4 +42,5 @@
   text-align: center;
 
   background-color: rgba(0, 0, 0, 0.416);
+  backdrop-filter: blur(1px);
 }

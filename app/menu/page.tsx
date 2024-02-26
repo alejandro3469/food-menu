@@ -3,6 +3,7 @@ import { DM_Serif_Display } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import List from "./List";
 import { FiExternalLink } from "react-icons/fi";
+import { VscLinkExternal } from "react-icons/vsc";
 
 const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
@@ -131,7 +132,7 @@ export default function Home() {
           className="maps_location"
           href={"https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9"}
         >
-          La antigua, Tultepec, Estado de Mexico <FiExternalLink />
+          La antigua, Tultepec, Estado de Mexico <VscLinkExternal />
         </Link>
         <div className="bannerimage">
           <Image

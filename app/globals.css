@@ -16,6 +16,9 @@ html {
 .banner {
   padding: 16px;
 }
+.banner p {
+  font-size: 18px;
+}
 .bannerimage {
   margin-top: 16px;
 }

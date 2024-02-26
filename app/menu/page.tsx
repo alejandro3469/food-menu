@@ -127,6 +127,12 @@ export default function Home() {
       <div className="banner">
         <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <Link
+          className="maps_location"
+          href={"https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9"}
+        >
+          La antigua, Tultepec, Estado de Mexico <FiExternalLink />
+        </Link>
         <div className="bannerimage">
           <Image
             alt={"restaurant"}
@@ -152,21 +158,6 @@ export default function Home() {
           <List title={data[3].name} category={data[3].items} />
         </div>
       </>
-
-      <div className="banner">
-        <h1 className={kalnia.className}>Ubicacion</h1>
-        <Link className="maps_location" href={'https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9'}>
-          La antigua, Tultepec, Estado de Mexico <FiExternalLink />
-        </Link>
-        <div className="bannerimage">
-          <Image
-            alt={"restaurant"}
-            src={"/map.png"}
-            width={400}
-            height={200}
-          />
-        </div>
-      </div>
     </main>
   );
 }

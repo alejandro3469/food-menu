@@ -59,7 +59,7 @@ export default function Home() {
       items: [
         {
           item: "Agua fresca (500ml)",
-          cost: ["20.00"],
+          cost: ["20.00", "30.00"],
           image: "/water.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
@@ -114,6 +114,13 @@ export default function Home() {
           item: "Pastel de chocolate",
           cost: ["20.00"],
           image: "/chocolatecake.jpg",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        },
+        {
+          item: "Pan de dulce",
+          cost: ["10.00"],
+          image: "/bread.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },

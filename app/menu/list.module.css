@@ -27,7 +27,7 @@
 
 .container ul {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 .decoration {
   position: fixed;

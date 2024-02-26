@@ -8,13 +8,13 @@ export const roboto_slab = Open_Sans({ subsets: ["latin"], display: "swap" });
 export default function Dish({
   image,
   name,
-  prize,
+  sizes,
   description,
   height,
 }: {
   image: string;
   name: string;
-  prize: string;
+  sizes: any[];
   description: string;
   height: number;
 }) {
@@ -34,19 +34,19 @@ export default function Dish({
       <div>
         <h3 className={styles.name}>{name}</h3>
         <div className={styles.prize}>
-          {prize.length === 2 && prize[0] && (
+          {sizes.length === 2 && sizes[0].prize && (
             <>
               <div>
-                <span>Chico </span>
-                <span>${prize[0]}</span>
+                <span>{sizes[0].name} </span>
+                <span>${sizes[0].prize}</span>
               </div>
               <div>
-                <span>Grande </span>
-                <span>${prize[1]}</span>
+                <span>{sizes[1].name} </span>
+                <span>${sizes[1].prize}</span>
               </div>
             </>
           )}
-          {prize.length === 1 && prize[0] && <>${prize}</>}
+          {sizes.length === 1 && sizes[0].prize && <>${sizes[0].prize}</>}
         </div>
       </div>
     </div>

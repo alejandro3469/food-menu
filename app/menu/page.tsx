@@ -25,7 +25,7 @@ export default function Home() {
       items: [
         {
           item: "Empanada de camarón",
-          cost: ["65.00"],
+          sizes: [{ name: "", prize: "65.00" }],
           image: "/camaron.jpg",
           description:
             "Crujiente. rellena de exquisito camaron, jitomate, cilantro y cebolla. Acompanada con arroz y aguacate",
@@ -33,20 +33,21 @@ export default function Home() {
 
         {
           item: "Aguachile",
-          cost: ["65.00"],
+          sizes: [{ name: "", prize: "65.00" }],
           image: "/aguachile.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-        },  
+        },
         {
           item: "Coctel",
-          cost: ["65.00"],
+          sizes: [{ name: "", prize: "65.00" }],
           image: "/coctel.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        },        {
+        },
+        {
           item: "Filete de pescado",
-          cost: ["65.00"],
+          sizes: [{ name: "", prize: "65.00" }],
           image: "/filete2.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
@@ -54,14 +55,14 @@ export default function Home() {
 
         {
           item: "Tostada de camarón",
-          cost: ["10.00"],
+          sizes: [{ name: "", prize: "10.00" }],
           image: "/tostada.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         },
         {
           item: "Caldo de camarón",
-          cost: ["65.00"],
+          sizes: [{ name: "", prize: "65.00" }],
           image: "/caldo2.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -73,28 +74,31 @@ export default function Home() {
       items: [
         {
           item: "Agua fresca (500ml)",
-          cost: ["20.00", "30.00"],
+          sizes: [
+            { name: "Vaso", prize: "20.00" },
+            { name: "Jarra", prize: "30.00" },
+          ],
           image: "/water.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         },
         {
           item: "Refresco (600ml)",
-          cost: ["20.00"],
+          sizes: [{ name: "", prize: "20.00" }],
           image: "/coke.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
         {
           item: "Café",
-          cost: ["15.00"],
+          sizes: [{ name: "", prize: "15.00" }],
           image: "/coffee.jpg",
           description:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
         },
         {
           item: "Té",
-          cost: ["10.00"],
+          sizes: [{ name: "", prize: "10.00" }],
           image: "/tea.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -107,7 +111,10 @@ export default function Home() {
       items: [
         {
           item: "Pozole grande",
-          cost: ["20.00", "70.00"],
+          sizes: [
+            { name: "Grande", prize: "20.00" },
+            { name: "Chigo", prize: "70.00" },
+          ],
           image: "/pozole.jpg",
           description:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
@@ -119,21 +126,21 @@ export default function Home() {
       items: [
         {
           item: "Pay de queso",
-          cost: ["20.00"],
+          sizes: [{ name: "", prize: "20.00" }],
           image: "/cheesecake.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
         {
           item: "Pastel de chocolate",
-          cost: ["20.00"],
+          sizes: [{ name: "", prize: "20.00" }],
           image: "/chocolatecake.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
         {
           item: "Pan de dulce",
-          cost: ["10.00"],
+          sizes: [{ name: "", prize: "10.00" }],
           image: "/bread.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",

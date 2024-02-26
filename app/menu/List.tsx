@@ -45,7 +45,7 @@ export default function List({
             <Dish
               image={i.image}
               name={i.item}
-              prize={i.cost}
+              sizes={i.sizes}
               description={i.description}
               height={1}
             />

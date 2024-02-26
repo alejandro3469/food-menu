@@ -2,6 +2,7 @@ import Image from "next/image";
 import { DM_Serif_Display } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import List from "./List";
+import { FiExternalLink } from "react-icons/fi";
 
 const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
@@ -10,6 +11,7 @@ const playfairdisplay = Playfair_Display({
 });
 
 import { Kalnia } from "next/font/google";
+import Link from "next/link";
 const kalnia = Kalnia({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
@@ -134,18 +136,36 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="cats_nav">
-        {data.map((category, index) => (
-          <a key={index} href={`#${category.name}`}>
-            {category.name}
-          </a>
-        ))}
-      </div>
-      <div className="lists">
-        <List title={data[0].name} category={data[0].items} />
-        <List title={data[1].name} category={data[1].items} />
-        <List title={data[2].name} category={data[2].items} />
-        <List title={data[3].name} category={data[3].items} />
+
+      <>
+        <div className="cats_nav">
+          {data.map((category, index) => (
+            <a key={index} href={`#${category.name}`}>
+              {category.name}
+            </a>
+          ))}
+        </div>
+        <div className="lists">
+          <List title={data[0].name} category={data[0].items} />
+          <List title={data[1].name} category={data[1].items} />
+          <List title={data[2].name} category={data[2].items} />
+          <List title={data[3].name} category={data[3].items} />
+        </div>
+      </>
+
+      <div className="banner">
+        <h1 className={kalnia.className}>Ubicacion</h1>
+        <Link href={'https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9'}>
+          La antigua, Tultepec, Estado de Mexico <FiExternalLink />
+        </Link>
+        <div className="bannerimage">
+          <Image
+            alt={"restaurant"}
+            src={"/map.png"}
+            width={400}
+            height={200}
+          />
+        </div>
       </div>
     </main>
   );

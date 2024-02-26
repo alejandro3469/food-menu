@@ -34,16 +34,14 @@ export default function Dish({
       <div>
         <h3 className={styles.name}>{name}</h3>
         <div className={styles.prize}>
-          {sizes.length === 2 && sizes[0].prize && (
+          {sizes.length >= 2 && (
             <>
-              <div>
-                <span>{sizes[0].name} </span>
-                <span>${sizes[0].prize}</span>
-              </div>
-              <div>
-                <span>{sizes[1].name} </span>
-                <span>${sizes[1].prize}</span>
-              </div>
+              {sizes.map((size, index) => (
+                <div key={index}>
+                  <span>{size.name} </span>
+                  <span>${size.prize}</span>
+                </div>
+              ))}
             </>
           )}
           {sizes.length === 1 && sizes[0].prize && <>${sizes[0].prize}</>}

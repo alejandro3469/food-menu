@@ -19,7 +19,7 @@ export default function Dish({
   height: number;
 }) {
   return (
-    <div className={`${styles.container} ${roboto_slab.className}`}>
+    <div className={`${styles.container}`}>
       <span className={styles.extra_square} />
       <div className={styles.image_container}>
         <p className={styles.desctiption}>{description}</p>

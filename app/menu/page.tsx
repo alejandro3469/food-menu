@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { DM_Serif_Display } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import List from "./List";
 import { FiExternalLink } from "react-icons/fi";
 import { VscLinkExternal } from "react-icons/vsc";
 
-const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
+const nunito = Roboto({ weight: "300", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
@@ -124,7 +124,7 @@ export default function Home() {
   console.log(data);
 
   return (
-    <main>
+    <main className={nunito.className}>
       <div className="banner">
         <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>

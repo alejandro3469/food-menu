@@ -125,6 +125,14 @@ export default function Home() {
       <div className="banner">
         <h1 className={kalnia.className}>Cocina La antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div className="bannerimage">
+          <Image
+            alt={"restaurant"}
+            src={"/bannerimage.jpg"}
+            width={400}
+            height={200}
+          />
+        </div>
       </div>
       <div className="cats_nav">
         {data.map((category, index) => (

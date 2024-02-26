@@ -16,6 +16,9 @@ html {
 .banner {
   padding: 16px;
 }
+.bannerimage {
+  margin-top: 16px;
+}
 
 .cats_nav {
   display: flex;

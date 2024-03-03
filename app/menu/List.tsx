@@ -44,7 +44,7 @@ export default function List({
           <li key={index}>
             <Dish
               image={i.image}
-              name={i.item}
+              name={i.name}
               sizes={i.sizes}
               description={i.description}
               height={1}

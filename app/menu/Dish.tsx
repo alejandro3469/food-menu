@@ -14,7 +14,7 @@ export default function Dish({
 }: {
   image: string;
   name: string;
-  sizes: any[];
+  sizes: any;
   description: string;
   height: number;
 }) {
@@ -36,15 +36,16 @@ export default function Dish({
         <div className={styles.prize}>
           {sizes.length >= 2 && (
             <>
-              {sizes.map((size, index) => (
+              {/*sizes.map((size:any, index:any) => (
                 <div key={index}>
                   <span>{size.name} </span>
                   <span>${size.prize}</span>
                 </div>
-              ))}
+              ))*/}
             </>
           )}
-          {sizes.length === 1 && sizes[0].prize && <>${sizes[0].prize}</>}
+          {`${sizes.name} `}
+          {`${'$'}${sizes.prize}`}
         </div>
       </div>
     </div>

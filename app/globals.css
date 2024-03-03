@@ -10,6 +10,10 @@
   margin: 0;
   padding: 0;
 }
+::placeholder {
+  color: black;
+  opacity: 1;
+}
 html {
   scroll-behavior: smooth;
 }

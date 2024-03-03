@@ -11,6 +11,8 @@ const playfairdisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
+import { fetchDishes } from "@/app/lib/data";
+
 import { Kalnia } from "next/font/google";
 import Link from "next/link";
 const kalnia = Kalnia({
@@ -18,7 +20,8 @@ const kalnia = Kalnia({
   subsets: ["latin"],
 });
 
-export default function Home() {
+export default async function Home() {
+  const dishes = await fetchDishes();
   const data = [
     {
       name: "Mariscos",
@@ -127,7 +130,7 @@ export default function Home() {
         {
           item: "Pay de queso",
           sizes: [{ name: "", prize: "20.00" }],
-          image: "/cheesecake.jpg",
+          image: "/cheesecake2.jpg",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         },
@@ -181,10 +184,10 @@ export default function Home() {
           ))}
         </div>
         <div className="lists">
-          <List title={data[0].name} category={data[0].items} />
-          <List title={data[1].name} category={data[1].items} />
+          <List title={"Mariscos"} category={dishes} />
+          {/*<List title={data[1].name} category={data[1].items} />
           <List title={data[2].name} category={data[2].items} />
-          <List title={data[3].name} category={data[3].items} />
+          <List title={data[3].name} category={data[3].items} />*/}
         </div>
       </>
     </main>

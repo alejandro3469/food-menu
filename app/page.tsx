@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main>
       <Link href="/menu">Menu</Link>
-      <Link href="/dashboard">Dashboard</Link>
+      {/*<Link href="/dashboard">Dashboard</Link>*/}
       {/*<Link href="/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit">Edit</Link>*/}
       <Link href="/edit-dishes">Edit Dishes</Link>
     </main>

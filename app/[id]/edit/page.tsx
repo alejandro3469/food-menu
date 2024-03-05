@@ -8,8 +8,6 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <main>
       <p>{dish.name}</p>
-
-      
       {<Form dish={dish} />}
     </main>
   );

@@ -6,6 +6,7 @@ import styles from "./form.module.css";
 
 import Link from "next/link";
 import { Button } from "@/app/ui/button";
+import { fetchCategories, fetchDishes } from "@/app/lib/data";
 
 export default function EditInvoiceForm({ dish }: { dish: Dishes }) {
   const updateInvoiceWithId = updateDish.bind(null, dish.id);
@@ -22,16 +23,12 @@ export default function EditInvoiceForm({ dish }: { dish: Dishes }) {
         className={styles.input}
         placeholder={dish.name}
       />
-      <label className={styles.label} htmlFor="name">
+      <label className={styles.label} htmlFor="category">
         Categoria
       </label>
-      <input
-        id="category"
-        name="category"
-        type="text"
-        className={styles.input}
-        placeholder={dish.category}
-      />
+      
+      {/*select*/}
+      
       <label className={styles.label} htmlFor="name">
         Descripcion
       </label>

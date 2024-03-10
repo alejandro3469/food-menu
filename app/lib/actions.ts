@@ -23,10 +23,10 @@ export async function createDish(formData: FormData) {
   const { dishId, name, category, sizes, image, description } = CreateInvoice.parse({
     dishId: formData.get('customerId'),
     name: formData.get('amount'),
-    category: formData.get('amount'),
-    sizes: formData.get('amount'),
+    category: formData.get('category'),
+    sizes: formData.get('sizes'),
     image: formData.get('amount'),
-    description: formData.get('amount'),
+    description: formData.get('description'),
   });
   const date = new Date().toISOString().split('T')[0];
 
@@ -46,7 +46,7 @@ export async function updateDish(id: string, formData: FormData) {
   const { dishId, name, category, sizes, image, description } = UpdateDish.parse({
     dishId: formData.get('name'),
     name: formData.get('name'),
-    category: formData.get('name'),
+    category: formData.get('category'),
     sizes: formData.get('name'),
     image: formData.get('name'),
     description: formData.get('description'),

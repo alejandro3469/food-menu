@@ -6,10 +6,7 @@ export type Dishes = {
   sizes: any;
   description: string;
 };
-export type CustomerField = {
+export type Categories = {
   id: string;
-  image: string;
   name: string;
-  sizes: any;
-  description: string;
 };

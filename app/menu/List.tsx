@@ -40,17 +40,20 @@ export default function List({
         <span className={styles.items}>{"(4 platillos)"}</span>
       </h2>
       <ul>
-        {category.map((i, index) => (
-          <li key={index}>
-            <Dish
-              image={i.image}
-              name={i.name}
-              sizes={i.sizes}
-              description={i.description}
-              height={1}
-            />
-          </li>
-        ))}
+        {category.map(
+          (i, index) =>
+            i.category.replace(/\s/g, "") == title.replace(/\s/g, "") && (
+              <li key={index}>
+                <Dish
+                  image={i.image}
+                  name={i.name}
+                  sizes={i.sizes}
+                  description={i.description}
+                  height={1}
+                />
+              </li>
+            )
+        )}
       </ul>
     </div>
   );

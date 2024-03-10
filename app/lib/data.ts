@@ -1,5 +1,5 @@
 import { sql } from "@vercel/postgres";
-import { Dishes } from "@/app/lib/definitions";
+import { Dishes, Categories } from "@/app/lib/definitions";
 import { unstable_noStore as noStore } from "next/cache";
 
 export async function fetchDishes() {
@@ -13,6 +13,19 @@ export async function fetchDishes() {
   } catch (err) {
     console.error("Database Error:", err);
     throw new Error("Failed to fetch all customers.");
+  }
+}
+export async function fetchCategories() {
+  noStore();
+  try {
+    console.log('Fetching categories data...');
+    const data = await sql<Categories>`SELECT * FROM categories`;
+
+    const customers = data.rows;
+    return customers;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch all categories.");
   }
 }
 

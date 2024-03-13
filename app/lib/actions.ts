@@ -85,7 +85,7 @@ export async function updateDish(id: string, formData: FormData) {
   } else {
     await sql`
       UPDATE dishes
-      SET sizes = ${sizes.toString()}
+      SET sizes = ${sizes}
       WHERE id = ${id}
     `;
   }

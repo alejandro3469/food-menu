@@ -56,18 +56,22 @@ export async function updateDish(id: string, formData: FormData) {
     description: formData.get('description'),
   });
 
-  if(formData.has("sizename1")) {
-    console.log('TRUEEEEEEEEEE')
-  }
-  
 
   let sizes;
-  if(formData.get('sizename2') != '' || formData.get('sizeprice2') != '') {
-    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }],
-  );
 
+  if (formData.has("sizename1") && (formData.has("sizename2") == false)) {
+    console.log('TRUEEEEEEEEEE')
+    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }])
   }
-  if (name === '') {
+
+  if (formData.has("sizename2") && (formData.has("sizename3") == false)) {
+    console.log('TRUEEEEEEEEEE')
+    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }, { 'name': `${formData.get('sizename2')}`, 'prize': `${formData.get('sizeprice2')}` }])
+  }
+
+
+
+  if (name == '') {
     console.log('lol')
   } else {
     await sql`
@@ -76,7 +80,7 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (sizes == null) {
+  if (sizes == null || sizes == undefined) {
     console.log(sizes)
   } else {
     await sql`

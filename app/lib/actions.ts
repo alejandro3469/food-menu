@@ -11,7 +11,6 @@ const FormSchema = z.object({
   dishId: z.string(),
   name: z.string(),
   category: z.string(),
-  sizes: z.string(),
   image: z.string(),
   description: z.string(),
   date: z.string(),
@@ -19,15 +18,21 @@ const FormSchema = z.object({
 
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 
+const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
+type Literal = z.infer<typeof literalSchema>;
+type Json = Literal | { [key: string]: Json } | Json[];
+const jsonSchema: z.ZodType<Json> = z.lazy(() =>
+  z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])
+);
+
 export async function createDish(formData: FormData) {
-  const { dishId, name, category, sizes, image, description } = CreateInvoice.parse({
+  const { dishId, name, category, image, description } = CreateInvoice.parse({
     dishId: formData.get('customerId'),
     name: formData.get('amount'),
     category: formData.get('category'),
-    sizes: formData.get('sizes'),
     image: formData.get('amount'),
-    description: formData.get('description'),
   });
+
   const date = new Date().toISOString().split('T')[0];
 
   // Test it out:
@@ -43,15 +48,20 @@ export async function createDish(formData: FormData) {
 // Update Dish Action
 const UpdateDish = FormSchema.omit({ id: true, date: true });
 export async function updateDish(id: string, formData: FormData) {
-  const { dishId, name, category, sizes, image, description } = UpdateDish.parse({
+  const { dishId, name, category, image, description } = UpdateDish.parse({
     dishId: formData.get('name'),
     name: formData.get('name'),
     category: formData.get('category'),
-    sizes: formData.get('name'),
     image: formData.get('name'),
     description: formData.get('description'),
   });
 
+  const sizes = '' 
+  if(formData.get('sizename2') != '' || formData.get('sizeprice2') != '') {
+    jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }],
+  );
+
+  }
   if (name === '') {
     console.log('lol')
   } else {
@@ -61,7 +71,16 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (category === '') {
+  if (sizes === '') {
+    console.log(sizes)
+  } else {
+    await sql`
+      UPDATE dishes
+      SET sizes = ${sizes}
+      WHERE id = ${id}
+    `;
+  }
+  if (category == '') {
     console.log('lol')
   } else {
     await sql`
@@ -79,7 +98,6 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-
 
 
   revalidatePath('/edit-dishes');

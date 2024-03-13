@@ -44,6 +44,10 @@ export default function Dish({
               ))}
             </>
           )}
+          {/*<div>
+                  <span>{sizes.name} </span>
+                  <span>${sizes.prize}</span>
+            </div>*/}
         </div>
       </div>
     </div>

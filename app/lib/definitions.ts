@@ -3,7 +3,7 @@ export type Dishes = {
   image: string;
   category: string;
   name: string;
-  sizes: any;
+  sizes: any[];
   description: string;
 };
 export type Categories = {

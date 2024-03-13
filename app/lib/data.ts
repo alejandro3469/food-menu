@@ -19,7 +19,11 @@ export async function fetchCategories() {
   noStore();
   try {
     console.log('Fetching categories data...');
-    const data = await sql<Categories>`SELECT * FROM categories`;
+    const data = await sql<Categories>`
+    SELECT
+      categories.id,
+      categories.name 
+    FROM categories`;
 
     const customers = data.rows;
     return customers;

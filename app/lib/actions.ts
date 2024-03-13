@@ -56,9 +56,14 @@ export async function updateDish(id: string, formData: FormData) {
     description: formData.get('description'),
   });
 
-  const sizes = '' 
+  if(formData.has("sizename1")) {
+    console.log('TRUEEEEEEEEEE')
+  }
+  
+
+  let sizes;
   if(formData.get('sizename2') != '' || formData.get('sizeprice2') != '') {
-    jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }],
+    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }],
   );
 
   }
@@ -71,7 +76,7 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (sizes === '') {
+  if (sizes == null) {
     console.log(sizes)
   } else {
     await sql`

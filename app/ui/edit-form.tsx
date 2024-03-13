@@ -5,7 +5,6 @@ import { updateDish } from "@/app/lib/actions";
 import styles from "./form.module.css";
 
 import Link from "next/link";
-import { Button } from "@/app/ui/button";
 import { fetchCategories, fetchDishes } from "@/app/lib/data";
 
 export default function EditInvoiceForm({

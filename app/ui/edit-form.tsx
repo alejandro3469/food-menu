@@ -7,7 +7,7 @@ import styles from "./form.module.css";
 import Link from "next/link";
 import { fetchCategories, fetchDishes } from "@/app/lib/data";
 
-export default function EditInvoiceForm({
+export default function EditForm({
   dish,
   categories,
 }: {

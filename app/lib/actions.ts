@@ -16,6 +16,8 @@ const FormSchema = z.object({
   date: z.string(),
 });
 
+const sizesSchema = z.string();
+
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
@@ -68,6 +70,7 @@ export async function updateDish(id: string, formData: FormData) {
     console.log('TRUEEEEEEEEEE')
     sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }, { 'name': `${formData.get('sizename2')}`, 'prize': `${formData.get('sizeprice2')}` }])
   }
+  const size1 = sizesSchema.parse(formData.get('sizename1'))
 
 
 
@@ -80,12 +83,12 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (sizes == null || sizes == undefined) {
+  if (size1 == null || size1 == undefined) {
     console.log(sizes)
   } else {
     await sql`
       UPDATE dishes
-      SET sizes = ${sizes}
+      SET sizes[1] -> 'name' = ${size1}
       WHERE id = ${id}
     `;
   }

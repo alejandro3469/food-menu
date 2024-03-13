@@ -114,7 +114,7 @@ const dishes = [
     category: categories[1].name,
     sizes: [
       { name: "Grande", prize: "20.00" },
-      { name: "Chigo", prize: "70.00" },
+      { name: "Chico", prize: "70.00" },
     ],
     image: "/pozole.jpg",
     description:

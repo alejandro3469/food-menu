@@ -70,8 +70,24 @@ export async function updateDish(id: string, formData: FormData) {
     console.log('TRUEEEEEEEEEE')
     sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }, { 'name': `${formData.get('sizename2')}`, 'prize': `${formData.get('sizeprice2')}` }])
   }
-  const size1 = sizesSchema.parse(formData.get('sizename1'))
 
+  //const size1;
+  //if (formData.has('sizename1')) {
+  const size1 = sizesSchema.parse(formData.get('sizename1'))
+  //}
+
+  let size2;
+  if (formData.has('sizename2')) {
+    size2 = sizesSchema.parse(formData.get('sizename2'))
+  }
+  let prize1;
+  if (formData.has('sizeprize2')) {
+    prize1 = sizesSchema.parse(formData.get('sizeprize1'))
+  }
+  let prize2;
+  if (formData.has('sizeprize2')) {
+    prize2 = sizesSchema.parse(formData.get('sizeprize2'))
+  }
 
 
   if (name == '') {
@@ -80,15 +96,6 @@ export async function updateDish(id: string, formData: FormData) {
     await sql`
       UPDATE dishes
       SET name = ${name}
-      WHERE id = ${id}
-    `;
-  }
-  if (size1 == null || size1 == undefined) {
-    console.log(sizes)
-  } else {
-    await sql`
-      UPDATE dishes
-      SET sizes[1] -> 'name' = ${size1}
       WHERE id = ${id}
     `;
   }
@@ -101,8 +108,8 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (description === '') {
-    console.log('lol')
+  if (description == '') {
+    console.log(`${id} HMMMM`)
   } else {
     await sql`
       UPDATE dishes
@@ -110,6 +117,17 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
+
+  if (size1 == null || size1 == undefined || size1 == '') {
+    console.log(id)
+  } else {
+    console.log(id)
+    console.log(size1)
+    console.log('updated SIZEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
+    await sql`UPDATE dishes SET sizes[1] = jsonb_set(sizes[1], '{name}', "${size1}", false) WHERE id = ${id}`;
+
+  } //
+
 
 
   revalidatePath('/edit-dishes');

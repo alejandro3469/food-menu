@@ -12,7 +12,7 @@ async function seedUsers(client) {
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         category TEXT NOT NULL,
-        sizes JSON ARRAY NOT NULL,
+        sizes JSONB ARRAY NOT NULL,
         image TEXT NOT NULL,
         description TEXT NOT NULL
       );

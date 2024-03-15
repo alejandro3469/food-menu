@@ -125,14 +125,12 @@ export async function updateDish(id: string, formData: FormData) {
     console.log(size1)
     console.log('updated SIZEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
     await sql`UPDATE dishes
-    SET sizes[1] = jsonb_set(sizes[1], '{name}', '"Lol"', false)
-    WHERE id = '126eed9c-c90c-4ef6-a4a8-fcf7408d3c72'`;
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', '"cant make it work YET1"', false)
+    WHERE id = '126eed9c-c90c-4ef6-a4a8-fcf7408d3c74'`;
+    console.log('------------ U P D A T E D --- W O R K E D ------------')
 
   } // WORKING ON IT
-  await sql`UPDATE dishes
-    SET sizes[1] = jsonb_set(sizes[1], '{name}', '"cant make it work YET"', false)
-    WHERE id = '126eed9c-c90c-4ef6-a4a8-fcf7408d3c74'`;
-  console.log('------------ U P D A T E D --- W O R K E D ------------')
+
 
 
 

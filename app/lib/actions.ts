@@ -1,6 +1,6 @@
 'use server';
 import { sql } from '@vercel/postgres';
-import { string, z } from 'zod';
+import { z } from 'zod';
 
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -16,9 +16,7 @@ const FormSchema = z.object({
   date: z.string(),
 });
 
-const sizesSchema = z.object(
-  { sizename: z.string() }
-);
+const sizesSchema = z.string();
 
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 
@@ -61,7 +59,7 @@ export async function updateDish(id: string, formData: FormData) {
   });
 
 
-  /*let sizes;
+  let sizes;
 
   if (formData.has("sizename1") && (formData.has("sizename2") == false)) {
     console.log('TRUEEEEEEEEEE')
@@ -72,9 +70,11 @@ export async function updateDish(id: string, formData: FormData) {
     console.log('TRUEEEEEEEEEE')
     sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }, { 'name': `${formData.get('sizename2')}`, 'prize': `${formData.get('sizeprice2')}` }])
   }
-*/
 
-  const { sizename } = sizesSchema.parse({ sizename: formData.get('sizename1') })
+  //const size1;
+  //if (formData.has('sizename1')) {
+  const size1 = sizesSchema.parse(formData.get('sizename1'))
+  //}
 
   let size2;
   if (formData.has('sizename2')) {
@@ -117,24 +117,19 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  const sentence = `UPDATE dishes
-  SET sizes[1] = jsonb_set(sizes[1], '{name}', '${sizename}', false)
-  WHERE id = ${id};`;
 
-  if (false/*size1 == null || size1 == undefined || size1 == ''*/) {
+  if (size1 == null || size1 == undefined || size1 == '') {
     console.log(id)
-    console.log("size name" + sizename)
   } else {
     console.log(id)
-    console.log("size name: " + sizename + "=" + typeof (sizename))
+    console.log(size1)
+    console.log('updated SIZEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
     await sql`UPDATE dishes
-    SET sizes[1] = jsonb_set(sizes[1], '{name}', '${sizename}', false)
-    WHERE id = ${id};`;
-
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', '${size1}', false)
+    WHERE id = ${id}`;
     console.log('------------ U P D A T E D --- W O R K E D ------------')
 
   } // WORKING ON IT
-
 
 
 

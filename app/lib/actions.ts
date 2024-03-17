@@ -73,7 +73,7 @@ export async function updateDish(id: string, formData: FormData) {
 
   //const size1;
   //if (formData.has('sizename1')) {
-  const size1 = sizesSchema.parse(formData.get('sizename1'))
+  const size1 = sizesSchema.parse(formData.get('sizename1'));
   //}
 
   let size2;
@@ -118,14 +118,17 @@ export async function updateDish(id: string, formData: FormData) {
     `;
   }
 
+  const lmao = `${size1}`
+
   if (size1 == null || size1 == undefined || size1 == '') {
     console.log(id)
   } else {
-    console.log(id)
-    console.log(size1)
-    console.log('updated SIZEEEEEEEEEEEEEEEEEEEEEEEEEEEE')
+    console.log(`UPDATE dishes
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', \'\"${size1}\"\', false)
+    WHERE id = ${id}`)
+    console.log(size1 + " = " + typeof (size1) + " = " + typeof (size1.valueOf()))
     await sql`UPDATE dishes
-    SET sizes[1] = jsonb_set(sizes[1], '{name}', '${size1}', false)
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', \'\"MHMMMM3331\"\'::jsonb, false)
     WHERE id = ${id}`;
     console.log('------------ U P D A T E D --- W O R K E D ------------')
 

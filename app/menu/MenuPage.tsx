@@ -48,6 +48,7 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
           />{" "}
         </div>
       </div>
+      <h2 className={`${kalnia.className} h2`}>Menu</h2>
       <Link className="menu_presentation" href={"./simple"}>
         <TbListDetails />
       </Link>

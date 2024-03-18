@@ -29,7 +29,7 @@ export default function List({
     <div id={title} className={`${styles.container}`}>
       <span className={styles.decoration} />
 
-      <h2 className={`${styles.title}`}>
+      <h3 className={`${styles.title}`}>
         <span className={styles.icon_title}>
           {title === "Mariscos" && <FaShrimp />}
           {title === "Bebidas" && <MdOutlineEmojiFoodBeverage />}
@@ -38,7 +38,7 @@ export default function List({
           {title}
         </span>{" "}
         <span className={styles.items}>{"(4 platillos)"}</span>
-      </h2>
+      </h3>
       <ul>
         {category.map(
           (i, index) =>

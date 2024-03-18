@@ -73,9 +73,12 @@ main {
   overflow-x: hidden;
 }
 
-
 h1 {
   font-size: 32px;
+}
+.h2 {
+  font-size: 28px;
+  padding: 16px;
 }
 nav {
   font-weight: 300;

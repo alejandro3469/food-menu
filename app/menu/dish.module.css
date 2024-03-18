@@ -25,9 +25,13 @@
 }
 .name {
   font-size: 16px;
+  white-space: nowrap;
   font-weight: 600;
   max-width: 200px;
   white-space: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .prize {
   font-size: 14px;
@@ -65,9 +69,26 @@
 .name_simple {
   font-size: 16px;
   font-weight: 600;
-  max-width: 200px;
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
   white-space: normal;
 }
 .desctiption_simple {
   width: 260px;
+}
+
+.available {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #00e676;
 }

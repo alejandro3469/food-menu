@@ -32,7 +32,7 @@ export default function Dish({
         />
       </div>
       <div>
-        <h3 className={styles.name}>{name}</h3>
+        <h3 className={styles.name}>{name} </h3>
         <div className={styles.prize}>
           {sizes && <>{sizes.replace(/,/g, "\r\n")}</>}
           {/*<div>

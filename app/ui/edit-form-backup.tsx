@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { Dishes, Categories } from "@/app/lib/definitions";
 import { updateDish } from "@/app/lib/actions";
@@ -45,16 +45,27 @@ export default function EditForm({
         )}
       </select>
 
-      <label className={styles.label} htmlFor="size1">
+      <label className={styles.label} htmlFor="name">
         Precios
       </label>
-      <input
-        id="size1"
-        name="size1"
-        type="text"
-        className={styles.input}
-        placeholder={dish.sizes}
-      />
+      {dish.sizes.map((size, index) => (
+        <div key={index} className="precios">
+          <input
+            id={`sizename${index + 1}`}
+            name={`sizename${index + 1}`}
+            type="text"
+            className={styles.input}
+            placeholder={size.name}
+          />
+          <input
+            id={`sizeprice${index + 1}`}
+            name={`sizeprice${index + 1}`}
+            type="text"
+            className={styles.input}
+            placeholder={`$ ${size.prize}`}
+          />
+        </div>
+      ))}
 
       <label className={styles.label} htmlFor="name">
         Descripcion
@@ -71,3 +82,4 @@ export default function EditForm({
     </form>
   );
 }
+*/

@@ -34,19 +34,10 @@ export default function Dish({
       <div>
         <h3 className={styles.name}>{name}</h3>
         <div className={styles.prize}>
-          {sizes && (
-            <>
-              {sizes.map((size: any, index: any) => (
-                <div key={index}>
-                  <span>{size.name} </span>
-                  <span>${size.prize}</span>
-                </div>
-              ))}
-            </>
-          )}
+          {sizes && <>{sizes.replace(/,/g, "\r\n")}</>}
           {/*<div>
-                  <span>{sizes.name} </span>
-                  <span>${sizes.prize}</span>
+              <span>{sizes.name} </span>
+              <span>${sizes.prize}</span>
             </div>*/}
         </div>
       </div>

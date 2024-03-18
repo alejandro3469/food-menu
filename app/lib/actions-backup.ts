@@ -1,8 +1,10 @@
 'use server';
 import { sql } from '@vercel/postgres';
 import { z } from 'zod';
+
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+
 
 const FormSchema = z.object({
   id: z.string(),
@@ -56,7 +58,37 @@ export async function updateDish(id: string, formData: FormData) {
     description: formData.get('description'),
   });
 
-  const size1 = sizesSchema.parse(formData.get('size1'));
+
+  let sizes;
+
+  if (formData.has("sizename1") && (formData.has("sizename2") == false)) {
+    console.log('TRUEEEEEEEEEE')
+    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }])
+  }
+
+  if (formData.has("sizename2") && (formData.has("sizename3") == false)) {
+    console.log('TRUEEEEEEEEEE')
+    sizes = jsonSchema.parse([{ 'name': `${formData.get('sizename1')}`, 'prize': `${formData.get('sizeprice1')}` }, { 'name': `${formData.get('sizename2')}`, 'prize': `${formData.get('sizeprice2')}` }])
+  }
+
+  //const size1;
+  //if (formData.has('sizename1')) {
+  const size1 = sizesSchema.parse(formData.get('sizename1'));
+  //}
+
+  let size2;
+  if (formData.has('sizename2')) {
+    size2 = sizesSchema.parse(formData.get('sizename2'))
+  }
+  let prize1;
+  if (formData.has('sizeprize2')) {
+    prize1 = sizesSchema.parse(formData.get('sizeprize1'))
+  }
+  let prize2;
+  if (formData.has('sizeprize2')) {
+    prize2 = sizesSchema.parse(formData.get('sizeprize2'))
+  }
+
 
   if (name == '') {
     console.log('lol')
@@ -85,15 +117,25 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (size1 == '') {
-    console.log(`${id} HMMMM`)
+
+  const lmao = `${size1}`
+
+  if (size1 == null || size1 == undefined || size1 == '') {
+    console.log(id)
   } else {
-    await sql`
-      UPDATE dishes
-      SET sizes = ${size1}
-      WHERE id = ${id}
-    `;
-  }
+    console.log(`UPDATE dishes
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', \'\"${size1}\"\', false)
+    WHERE id = ${id}`)
+    console.log(size1 + " = " + typeof (size1) + " = " + typeof (size1.valueOf()))
+    await sql`UPDATE dishes
+    SET sizes[1] = jsonb_set(sizes[1], '{name}', \'\"MHMMMM3331\"\'::jsonb, false)
+    WHERE id = ${id}`;
+    console.log('------------ U P D A T E D --- W O R K E D ------------')
+
+  } // WORKING ON IT
+
+
+
 
   revalidatePath('/edit-dishes');
   redirect('/edit-dishes');

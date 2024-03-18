@@ -12,7 +12,7 @@ async function seedUsers(client) {
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         category TEXT NOT NULL,
-        sizes TEXT NOT NULL,
+        sizes JSONB ARRAY NOT NULL,
         image TEXT NOT NULL,
         description TEXT NOT NULL
       );
@@ -25,11 +25,7 @@ async function seedUsers(client) {
       dishes.map(async (dish) => {
         return client.sql`
         INSERT INTO dishes (id, name, category, sizes, image, description)
-        VALUES (${dish.id}, ${dish.item}, ${
-          dish.category
-        }, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${
-          dish.description
-        })
+        VALUES (${dish.id}, ${dish.item}, ${dish.category}, ${dish.sizes}, ${dish.image}, ${dish.description})
         ON CONFLICT (id) DO NOTHING;
       `;
       })

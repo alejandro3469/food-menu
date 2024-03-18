@@ -9,11 +9,9 @@
   overflow-x: scroll;
   padding: 16px 16px 16px 16px;
 }
-
 .title {
   font-size: 20px;
   font-weight: 500;
-
   position: sticky !important;
   left: 0;
   display: flex;
@@ -24,7 +22,6 @@
   align-items: center;
   gap: 8px;
 }
-
 .container ul {
   display: flex;
   gap: 16px;

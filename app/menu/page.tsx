@@ -4,6 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import List from "./List";
 import { FiExternalLink } from "react-icons/fi";
 import { VscLinkExternal } from "react-icons/vsc";
+import React from "react";
 
 const nunito = Roboto({ weight: "300", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
@@ -21,12 +22,19 @@ const kalnia = Kalnia({
 });
 
 export default async function Home() {
+  const [likes, setLikes] = React.useState(0);
+ 
+  function handleClick() {
+    likes == 0 ? setLikes(1) : setLikes(0)
+  }
+
   const dishes = await fetchDishes();
 
   const categories = await fetchCategories();
 
   return (
     <main className={nunito.className}>
+      
       <div className="banner">
         <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -47,6 +55,7 @@ export default async function Home() {
       </div>
 
       <>
+      <button onClick={handleClick}>Likes ({likes})</button>
         <div className="cats_nav">
           {categories.map((category, index) => (
             <a key={index} href={`#${category.name}`}>

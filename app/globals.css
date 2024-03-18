@@ -97,6 +97,8 @@ nav {
   margin-left: 16px;
   cursor: pointer;
   font-size: 24px;
+  display: none;
+  visibility: hidden;
 }
 
 /*

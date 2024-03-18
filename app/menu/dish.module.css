@@ -12,12 +12,13 @@
   position: relative;
   /* transition: border-top-left-radius 0.3s, border-bottom-right-radius 0.3s; */
 }
+/*
 .image_container:hover {
-  /*border-top-left-radius: 16px;
+  border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;*/
-}
+  border-bottom-left-radius: 16px;
+}*/
 .image {
   overflow: visible;
   min-width: 200px;
@@ -43,4 +44,30 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.416);
   backdrop-filter: blur(1px);
+}
+
+/*SIMPLE MENU*/
+.container_simple {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+.name_des {
+  display: flex;
+  flex-direction: column;
+}
+.prize_simple {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+.name_simple {
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 200px;
+  white-space: normal;
+}
+.desctiption_simple {
+  width: 260px;
 }

@@ -56,7 +56,17 @@ export async function updateDish(id: string, formData: FormData) {
     description: formData.get('description'),
   });
 
+  console.log(formData.get('unavailable') + "=" + typeof (formData.get('unavailable')));
   const size1 = sizesSchema.parse(formData.get('size1'));
+
+  let available;
+  let unavailable;
+  if(formData.get('available')) {
+    available = sizesSchema.parse(formData.get('available'));
+  }
+  if(formData.get('unavailable')) {
+    unavailable = sizesSchema.parse(formData.get('unavailable'));
+  }
 
   if (name == '') {
     console.log('lol')
@@ -91,6 +101,24 @@ export async function updateDish(id: string, formData: FormData) {
     await sql`
       UPDATE dishes
       SET sizes = ${size1}
+      WHERE id = ${id}
+    `;
+  }
+  /*if (available == '' || available == null || available != 'available') {
+    console.log(`${id} HMMMM`)
+  } else {
+    await sql`
+      UPDATE dishes
+      SET available = ${available}
+      WHERE id = ${id}
+    `;
+  }*/
+  if (unavailable == '' || unavailable == null || unavailable != 'unavailable') {
+    console.log(`${id} HMMMM`)
+  } else {
+    await sql`
+      UPDATE dishes
+      SET available = ${unavailable}
       WHERE id = ${id}
     `;
   }

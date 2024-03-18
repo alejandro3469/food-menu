@@ -71,18 +71,18 @@ export default function EditForm({
           type="checkbox"
           id="available"
           name="available"
-          value={"available"}
+          value="available"
         />
-        <label htmlFor="scales">Disponible</label>
+        <label htmlFor="available">Disponible</label>
       </div>
       <div>
         <input
           type="checkbox"
           id="unavailable"
           name="unavailable"
-          value={"unavailable"}
+          value="unavailable"
         />
-        <label htmlFor="scales">Agotado</label>
+        <label htmlFor="unavailable">Agotado</label>
       </div>
       <button className={styles.button} type="submit">
         Guardar

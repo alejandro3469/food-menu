@@ -57,5 +57,5 @@
 .container_simple ul {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 28px;
 }

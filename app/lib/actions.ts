@@ -96,5 +96,5 @@ export async function updateDish(id: string, formData: FormData) {
   }
 
   revalidatePath('/edit-dishes');
-  redirect('/edit-dishes');
+  redirect('/menu/simple');
 }

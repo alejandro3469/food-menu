@@ -15,7 +15,7 @@ export default async function Home() {
   const dishes = await fetchDishes();
   return (
     <main>
-      <Link href="/menu">Menu</Link>
+      <Link href="/menu/simple">Menu</Link>
       <Link href="/edit-dishes">Edit Dishes</Link>
     </main>
   );

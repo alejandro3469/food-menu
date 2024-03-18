@@ -14,7 +14,8 @@ async function seedUsers(client) {
         category TEXT NOT NULL,
         sizes TEXT NOT NULL,
         image TEXT NOT NULL,
-        description TEXT NOT NULL
+        description TEXT NOT NULL,
+        available TEXT NOT NULL
       );
     `;
 
@@ -24,12 +25,8 @@ async function seedUsers(client) {
     const insertedUsers = await Promise.all(
       dishes.map(async (dish) => {
         return client.sql`
-        INSERT INTO dishes (id, name, category, sizes, image, description)
-        VALUES (${dish.id}, ${dish.item}, ${
-          dish.category
-        }, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${
-          dish.description
-        })
+        INSERT INTO dishes (id, name, category, sizes, image, description, available)
+        VALUES (${dish.id}, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${dish.description}, ${dish.available})
         ON CONFLICT (id) DO NOTHING;
       `;
       })

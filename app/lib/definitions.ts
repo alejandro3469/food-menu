@@ -5,6 +5,7 @@ export type Dishes = {
   name: string;
   sizes: string,
   description: string;
+  available: string;
 };
 
 //THE DEFINITION BELOW IS WHAT IT HAS TO BE LIKE IN THE FUTURE

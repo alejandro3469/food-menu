@@ -65,6 +65,25 @@ export default function EditForm({
         className={styles.input}
         placeholder={dish.description}
       />
+
+      <div>
+        <input
+          type="checkbox"
+          id="available"
+          name="available"
+          value={"available"}
+        />
+        <label htmlFor="scales">Disponible</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="unavailable"
+          name="unavailable"
+          value={"unavailable"}
+        />
+        <label htmlFor="scales">Agotado</label>
+      </div>
       <button className={styles.button} type="submit">
         Guardar
       </button>

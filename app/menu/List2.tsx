@@ -49,6 +49,7 @@ export default function List({
                   name={i.name}
                   sizes={i.sizes}
                   description={i.description}
+                  available={i.available}
                   height={1}
                 />
               </li>

@@ -104,7 +104,7 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  /*if (available == '' || available == null || available != 'available') {
+  if (available == '' || available == null || available != 'available') {
     console.log(`${id} HMMMM`)
   } else {
     await sql`
@@ -112,7 +112,7 @@ export async function updateDish(id: string, formData: FormData) {
       SET available = ${available}
       WHERE id = ${id}
     `;
-  }*/
+  }
   if (unavailable == '' || unavailable == null || unavailable != 'unavailable') {
     console.log(`${id} HMMMM`)
   } else {

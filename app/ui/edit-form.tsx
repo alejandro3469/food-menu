@@ -18,7 +18,7 @@ export default function EditForm({
 
   return (
     <form className={styles.form} action={updateInvoiceWithId}>
-      <label className={styles.label} htmlFor="name">
+      <label className={styles.label}>
         Nombre
       </label>
       <input
@@ -29,7 +29,7 @@ export default function EditForm({
         placeholder={dish.name}
       />
 
-      <label className={styles.label} htmlFor="category">
+      <label className={styles.label}>
         Categoria
       </label>
       <select name="category" id="category">
@@ -45,7 +45,7 @@ export default function EditForm({
         )}
       </select>
 
-      <label className={styles.label} htmlFor="size1">
+      <label className={styles.label}>
         Precios
       </label>
       <input
@@ -56,7 +56,7 @@ export default function EditForm({
         placeholder={dish.sizes}
       />
 
-      <label className={styles.label} htmlFor="name">
+      <label className={styles.label}>
         Descripcion
       </label>
       <textarea
@@ -73,7 +73,7 @@ export default function EditForm({
           name="available"
           value="available"
         />
-        <label htmlFor="available">Disponible</label>
+        <label>Disponible</label>
       </div>
       <div>
         <input
@@ -82,7 +82,7 @@ export default function EditForm({
           name="unavailable"
           value="unavailable"
         />
-        <label htmlFor="unavailable">Agotado</label>
+        <label>Agotado</label>
       </div>
       <button className={styles.button} type="submit">
         Guardar

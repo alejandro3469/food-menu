@@ -70,10 +70,8 @@
 .name_simple {
   font-weight: 600;
   display: flex;
-  flex-direction: column;
   gap: 8px;
   white-space: nowrap;
-  white-space: normal;
 }
 .desctiption_simple {
   width: 260px;

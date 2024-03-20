@@ -1,7 +1,12 @@
 import React from "react";
 import Dish2 from "./Dish2";
 import styles from "@/app/menu/list.module.css";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Corinthia } from "next/font/google";
+
+const corinthia = Corinthia({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 export const roboto_slab = Open_Sans({ subsets: ["latin"], display: "swap" });
 
 import { Kalnia } from "next/font/google";
@@ -29,15 +34,16 @@ export default function List({
     <div id={title} className={`${styles.container_simple}`}>
       <span className={styles.decoration} />
 
-      <h3 className={`${styles.title}`}>
-        <span className={styles.icon_title}>
+      <h3 className={`${corinthia.className} ${styles.title}`}>
+        {/*<span className={styles.icon_title}>
           {title === "Mariscos" && <FaShrimp />}
           {title === "Bebidas" && <MdOutlineEmojiFoodBeverage />}
           {title === "Pozole" && <LuSoup />}
           {title === "Postres" && <LuCakeSlice />}
           {title}
         </span>{" "}
-        <span className={styles.items}>{"(4 platillos)"}</span>
+  <span className={styles.items}>{"(4 platillos)"}</span>*/}
+        {title}
       </h3>
       <ul>
         {category.map(

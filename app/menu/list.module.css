@@ -8,7 +8,6 @@
   max-width: 100vw;
   overflow-x: scroll;
   padding: 16px 16px 16px 16px;
-  border-bottom: 1px dashed #000000;
 }
 
 .title {
@@ -18,6 +17,7 @@
   left: 0;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .icon_title {
   display: flex;
@@ -53,8 +53,11 @@
   width: 100%;
   max-width: 100vw;
   overflow-x: scroll;
-  padding: 16px 16px 16px 16px;
-  border-bottom: 1px dashed #000000;
+  padding: 16px 32px 16px 32px;
+  background-color: #f6f5f3;
+  border-top-left-radius: 240px;
+  border-top-right-radius: 240px;
+  padding-top: 48px;
 }
 .container_simple ul {
   display: flex;

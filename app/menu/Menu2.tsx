@@ -21,32 +21,23 @@ const kalnia = Kalnia({
   subsets: ["latin"],
 });
 
-export default async function Menu({
-  mode,
-}: {
-    mode: any;
-}) {
- 
-
+export default async function Menu({ mode }: { mode: any }) {
   const dishes = await fetchDishes();
 
   const categories = await fetchCategories();
 
   return (
     <main className={nunito.className}>
-      
-
       <>
-     
-      <div className="cats_nav">
+        {/* <div className="cats_nav">
           {categories.map((category, index) => (
             <a key={index} href={`#${category.name}`}>
               {category.name}
             </a>
           ))}
-        </div>
+          </div>*/}
         <div className="lists">
-        {categories.map((category, index) => (
+          {categories.map((category, index) => (
             <List2 key={index} title={category.name} category={dishes} />
           ))}
         </div>

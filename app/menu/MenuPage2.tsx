@@ -29,7 +29,7 @@ const kalnia = Kalnia({
 export default function MenuPage({ children }: { children: React.ReactNode }) {
   return (
     <main className={nunito.className}>
-      <div className="banner">
+     {/* <div className="banner">
         <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <Link
@@ -47,7 +47,7 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
           />{" "}
         </div>
       </div>
-      <h2 className={`${kalnia.className} h2`}>Menu</h2>
+      <h2 className={`${kalnia.className} h2`}>Menu</h2>*/}
       <Link className="menu_presentation" href={"./images"}>
         <IoImageSharp />
       </Link>

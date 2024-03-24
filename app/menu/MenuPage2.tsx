@@ -28,7 +28,7 @@ const kalnia = Kalnia({
 
 export default function MenuPage({ children }: { children: React.ReactNode }) {
   return (
-    <main className={nunito.className}>
+    <span className={nunito.className}>
       {/* <div className="banner">
         <h1 className={kalnia.className}>Cocina La Antigua</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -54,6 +54,6 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
       </Link>
 
       {children}
-    </main>
+    </span>
   );
 }

@@ -27,7 +27,7 @@ export default async function Menu({ mode }: { mode: any }) {
   const categories = await fetchCategories();
 
   return (
-    <main className={nunito.className}>
+    <span className={nunito.className}>
       <>
         {/* <div className="cats_nav">
           {categories.map((category, index) => (
@@ -42,6 +42,6 @@ export default async function Menu({ mode }: { mode: any }) {
           ))}
         </div>
       </>
-    </main>
+    </span>
   );
 }

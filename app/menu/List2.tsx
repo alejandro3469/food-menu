@@ -34,7 +34,7 @@ export default function List({
     <div id={title} className={`${styles.container_simple}`}>
       <span className={styles.decoration} />
 
-      <h3 className={`${corinthia.className} ${styles.title}`}>
+      <h3 className={`${styles.title}`}>
         {/*<span className={styles.icon_title}>
           {title === "Mariscos" && <FaShrimp />}
           {title === "Bebidas" && <MdOutlineEmojiFoodBeverage />}

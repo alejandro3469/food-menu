@@ -11,8 +11,10 @@
 }
 
 .title {
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 20px;
+  position: sticky;
+  font-weight: 600;
+  letter-spacing: 1.6px;
   position: sticky !important;
   left: 0;
   display: flex;

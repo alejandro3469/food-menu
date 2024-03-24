@@ -48,7 +48,11 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <h2 className={`${kalnia.className} h2`}>Menu</h2>*/}
-      <h1 className={kalnia.className}>Cocina La Antigua</h1>
+      <h1 className={kalnia.className}>
+        Cocina La Antigua{" "}
+        <Image src="/tray.png" width={80} height={80} alt="Restaurant logo" />
+      </h1>
+
       <Link className="menu_presentation" href={"./images"}>
         <IoImageSharp />
       </Link>

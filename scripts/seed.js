@@ -9,7 +9,7 @@ async function seedUsers(client) {
     // Create the "users" table if it doesn't exist
     const createTable = await client.sql`
       CREATE TABLE IF NOT EXISTS dishes (
-        id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+        id TEXT NOT NULL,
         name VARCHAR(255) NOT NULL,
         category TEXT NOT NULL,
         sizes TEXT NOT NULL,
@@ -26,8 +26,7 @@ async function seedUsers(client) {
       dishes.map(async (dish) => {
         return client.sql`
         INSERT INTO dishes (id, name, category, sizes, image, description, available)
-        VALUES (${dish.id}, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${dish.description}, ${dish.available})
-        ON CONFLICT (id) DO NOTHING;
+        VALUES (${dish.id}, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${dish.description}, ${dish.available});
       `;
       })
     );

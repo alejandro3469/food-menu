@@ -17,6 +17,7 @@ export default async function Home() {
     <main>
       <Link href="/menu/simple">Menu</Link>
       <Link href="/edit-dishes">Edit Dishes</Link>
+      <Link href="/create-items">Create Items</Link>
     </main>
   );
 }

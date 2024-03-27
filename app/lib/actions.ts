@@ -13,10 +13,20 @@ const FormSchema = z.object({
   description: z.string(),
   date: z.string(),
 });
+const FormSchema2 = z.object({
+  id: z.string(),
+  dishId: z.string(),
+  name: z.string(),
+  category: z.string(),
+  sizes: z.string(),
+  image: z.string(),
+  description: z.string(),
+  date: z.string(),
+});
 
 const sizesSchema = z.string();
 
-const CreateInvoice = FormSchema.omit({ id: true, date: true });
+const CreateInvoice = FormSchema2.omit({ id: true, date: true });
 
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 type Literal = z.infer<typeof literalSchema>;
@@ -25,12 +35,16 @@ const jsonSchema: z.ZodType<Json> = z.lazy(() =>
   z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])
 );
 
+
+//--\-|----\-----|----\-----|--\--\-------|--\-------|-----\-------|-\--------|---\--------|-----\-|------\---
 export async function createDish(formData: FormData) {
-  const { dishId, name, category, image, description } = CreateInvoice.parse({
-    dishId: formData.get('customerId'),
-    name: formData.get('amount'),
+  const { dishId, name, category, sizes, image, description } = CreateInvoice.parse({
+    dishId: formData.get('name'),
+    name: formData.get('name'),
     category: formData.get('category'),
-    image: formData.get('amount'),
+    sizes: formData.get('size1'),
+    image: formData.get('name'),
+    description: formData.get('description'),
   });
 
   const date = new Date().toISOString().split('T')[0];
@@ -38,12 +52,12 @@ export async function createDish(formData: FormData) {
   // Test it out:
   console.log(`rawFormData`);
   await sql`
-      INSERT INTO dishes (id, name, category, sizes, image, description)
-      VALUES (${dishId}, ${name}, ${name}, ${name}, ${name}, ${name})
+      INSERT INTO dishes (id, name, category, sizes, image, description, available)
+      VALUES (${dishId}, ${name}, ${category}, ${sizes}, ${image}, ${description}, ${description})
     `;
-  revalidatePath('/dashboard');
-  redirect('/menu');
-}
+    revalidatePath('/create-items');
+    redirect('/menu/simple');
+}//---\------|---\------|-----\--|------\-------|--\-------|----\------|----\----|------\--------\|----------
 
 // Update Dish Action
 const UpdateDish = FormSchema.omit({ id: true, date: true });

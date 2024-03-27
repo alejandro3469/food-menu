@@ -23,10 +23,18 @@ const FormSchema2 = z.object({
   description: z.string(),
   date: z.string(),
 });
+const FormSchema3 = z.object({
+  id: z.string(),
+  dishId: z.string(),
+  name: z.string(),
+  date: z.string(),
+});
 
 const sizesSchema = z.string();
 
 const CreateInvoice = FormSchema2.omit({ id: true, date: true });
+
+const CreateCategory = FormSchema3.omit({ id: true, date: true });
 
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 type Literal = z.infer<typeof literalSchema>;
@@ -58,6 +66,25 @@ export async function createDish(formData: FormData) {
     revalidatePath('/create-items');
     redirect('/menu/simple');
 }//---\------|---\------|-----\--|------\-------|--\-------|----\------|----\----|------\--------\|----------
+
+//--\-|----\-CATEGORIES----|----\----CATEGORIES -|--\--\-------|--\---CATEGORIES----|-----\-------|-\-----CATEGORIES---|---\--------|-----\-|------\---
+export async function createCategory(formData: FormData) {
+  const { dishId, name} = CreateCategory.parse({
+    dishId: formData.get('name'),
+    name: formData.get('name')
+  });
+
+  const date = new Date().toISOString().split('T')[0];
+
+  // Test it out:
+  console.log(`rawFormData`);
+  await sql`
+      INSERT INTO categories (id, name)
+      VALUES (${dishId}, ${name})
+    `;
+    revalidatePath('/create-items');
+    redirect('/menu/simple');
+}//---\--CATEGORIES----|---\-----CATEGORIES-|-----\-CATEGORIES-|------\-------|--\---CATEGORIES----|----\CATEGORIES-----|----\----|------\--------\|----------
 
 // Update Dish Action
 const UpdateDish = FormSchema.omit({ id: true, date: true });

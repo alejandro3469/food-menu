@@ -50,7 +50,7 @@ async function seedCategories(client) {
     // Create the "users" table if it doesn't exist
     const createTable = await client.sql`
       CREATE TABLE IF NOT EXISTS categories (
-        id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+        id TEXT NOT NULL,
         name VARCHAR(255) NOT NULL
       );
     `;
@@ -62,8 +62,7 @@ async function seedCategories(client) {
       categories.map(async (category) => {
         return client.sql`
         INSERT INTO categories (id, name)
-        VALUES (${category.id}, ${category.name})
-        ON CONFLICT (id) DO NOTHING;
+        VALUES (${category.id}, ${category.name});
       `;
       })
     );

@@ -111,6 +111,19 @@ nav {
   visibility: hidden;
 }
 
+.dashboard-link {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px 4px;
+  padding: 16px;
+  font-size: 24px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  gap: 16px;
+}
+
 /*
 :root {
   --foreground-rgb: 0, 0, 0;

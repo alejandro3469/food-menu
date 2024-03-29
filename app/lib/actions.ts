@@ -30,11 +30,18 @@ const FormSchema3 = z.object({
   date: z.string(),
 });
 
+const FormSchema4 = z.object({
+  id: z.string(),
+  name: z.string(),
+});
+
 const sizesSchema = z.string();
 
 const CreateInvoice = FormSchema2.omit({ id: true, date: true });
 
 const CreateCategory = FormSchema3.omit({ id: true, date: true });
+
+const DeleteDish = FormSchema4.omit({ id: true, date: true });
 
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 type Literal = z.infer<typeof literalSchema>;
@@ -63,13 +70,13 @@ export async function createDish(formData: FormData) {
       INSERT INTO dishes (id, name, category, sizes, image, description, available)
       VALUES (${dishId}, ${name}, ${category}, ${sizes}, ${image}, ${description}, ${description})
     `;
-    revalidatePath('/create-items');
-    redirect('/menu/simple');
+  revalidatePath('/create-items');
+  redirect('/menu/simple');
 }//---\------|---\------|-----\--|------\-------|--\-------|----\------|----\----|------\--------\|----------
 
 //--\-|----\-CATEGORIES----|----\----CATEGORIES -|--\--\-------|--\---CATEGORIES----|-----\-------|-\-----CATEGORIES---|---\--------|-----\-|------\---
 export async function createCategory(formData: FormData) {
-  const { dishId, name} = CreateCategory.parse({
+  const { dishId, name } = CreateCategory.parse({
     dishId: formData.get('name'),
     name: formData.get('name')
   });
@@ -82,9 +89,47 @@ export async function createCategory(formData: FormData) {
       INSERT INTO categories (id, name)
       VALUES (${dishId}, ${name})
     `;
-    revalidatePath('/create-items');
-    redirect('/menu/simple');
+  revalidatePath('/create-items');
+  redirect('/menu/simple');
 }//---\--CATEGORIES----|---\-----CATEGORIES-|-----\-CATEGORIES-|------\-------|--\---CATEGORIES----|----\CATEGORIES-----|----\----|------\--------\|----------
+
+
+
+
+
+//--\-|----\-DELETE----|----\----DELETE -|--\--\-------|--\---DELETE----|-----\-------|-\-----DELETE---|---\--------|-----\-|------\---
+export async function deleteCategory(formData: FormData) {
+  //const { name } = DeleteDish.parse({
+  //});
+
+  const date = new Date().toISOString().split('T')[0];
+  const name = sizesSchema.parse(formData.get('name'));
+
+
+  // Test it out:
+  console.log(`rawFormData DELETE = ${name}`);
+  await sql`DELETE FROM dishes WHERE name = ${name}`;
+  revalidatePath('/edit-dishes');
+  redirect('/menu/simple');
+}//---\--DELETE----|---\-----DELETE-|-----\-DELETE-|------\-------|--\---DELETE----|----\DELETE-----|----\----|------\--------\|----------
+//--\-|----\-DELETE----|----\----DELETE -|--\--\-------|--\---DELETE----|-----\-------|-\-----DELETE---|---\--------|-----\-|------\---
+export async function deleteCategory2(formData: FormData) {
+  //const { name } = DeleteDish.parse({
+  //});
+
+  const date = new Date().toISOString().split('T')[0];
+  const name = sizesSchema.parse(formData.get('name'));
+
+
+  // Test it out:
+  console.log(`rawFormData DELETE = ${name}`);
+  await sql`DELETE FROM categories WHERE name = ${name}`;
+  revalidatePath('/edit-dishes');
+  redirect('/menu/simple');
+}//---\--DELETE----|---\-----DELETE-|-----\-DELETE-|------\-------|--\---DELETE----|----\DELETE-----|----\----|------\--------\|----------
+
+
+
 
 // Update Dish Action
 const UpdateDish = FormSchema.omit({ id: true, date: true });
@@ -102,10 +147,10 @@ export async function updateDish(id: string, formData: FormData) {
 
   let available;
   let unavailable;
-  if(formData.get('available')) {
+  if (formData.get('available')) {
     available = sizesSchema.parse(formData.get('available'));
   }
-  if(formData.get('unavailable')) {
+  if (formData.get('unavailable')) {
     unavailable = sizesSchema.parse(formData.get('unavailable'));
   }
 

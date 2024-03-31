@@ -20,10 +20,10 @@ const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({ weight: "400", subsets: ["latin"] });
 
 export default async function Dashboard({
-    children, // will be a page or nested layout
-  }: {
-    children: React.ReactNode
-  }) {
+  children, // will be a page or nested layout
+}: {
+  children: React.ReactNode;
+}) {
   const dishes = await fetchDishes();
   const categories = await fetchCategories();
   return (
@@ -45,7 +45,7 @@ export default async function Dashboard({
           </span>
           Menu
         </Link>
-        <Link className={styles.dashboard_link} href="/dashboard/edit-dishes">
+        <Link className={styles.dashboard_link} href="/dashboard/">
           <span className={styles.menu_icon}>
             <LiaEdit />
           </span>

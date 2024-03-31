@@ -1,8 +1,11 @@
 import Form from "@/app/ui/edit-form";
 import { fetchDishes, fetchCategories } from "@/app/lib/data";
 import styles from "@/app/ui/form.module.css";
+import { useState } from "react";
 
 export default async function Page() {
+  //const [search, setSearch] = useState("");
+
   const dishes = await fetchDishes();
   const categories = await fetchCategories();
   return (

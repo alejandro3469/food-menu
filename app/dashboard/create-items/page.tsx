@@ -11,10 +11,10 @@ export default async function Page() {
   return (
     <main>
       <div className={styles.container}>
+        <h1>Create</h1>
         <Form dish={"dish"} categories={categories} />
 
         <Form2 dish={"dish"} categories={categories} />
-
       </div>
     </main>
   );

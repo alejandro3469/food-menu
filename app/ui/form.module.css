@@ -39,3 +39,8 @@
 .input:focus {
   outline: none;
 }
+.title {
+  text-align: left;
+  align-items: baseline;
+  padding: 16px;
+}

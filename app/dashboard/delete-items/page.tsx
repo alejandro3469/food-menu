@@ -10,7 +10,7 @@ export default async function Page() {
   const categories = await fetchCategories();
   return (
     <main>
-      <h1>Delete</h1>
+      <h1 className={styles.title}>Delete</h1>
 
       <div className={styles.container}>
         {dishes.map((dish, index) => (

@@ -7,7 +7,7 @@ export default async function Page() {
   const categories = await fetchCategories();
   return (
     <main>
-      <h1>Edit</h1>
+      <h1 className={styles.title}>Edit</h1>
 
       <div className={styles.container}>
         {dishes.map((dish, index) => (

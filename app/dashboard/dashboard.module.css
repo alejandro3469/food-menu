@@ -9,7 +9,9 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
-  background-color: rgb(241, 241, 241);
+  background-color: black;
+  color: rgb(241, 241, 241);
+
   gap: 16px;
 }
 .menu_icon {
@@ -20,7 +22,8 @@
   position: fixed;
   bottom: 0;
   justify-content: space-evenly;
-  background-color: rgb(241, 241, 241);
+  background-color: black;
+  color: rgb(241, 241, 241);
 
   width: 100vw;
 }

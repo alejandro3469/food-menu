@@ -27,7 +27,7 @@ export default async function Dashboard({
   const dishes = await fetchDishes();
   const categories = await fetchCategories();
   return (
-    <div className={roboto.className}>
+    <main className={`${roboto.className}`}>
       <div className={styles.mobile_navbar}>
         {/*<div>
           <div>
@@ -44,21 +44,18 @@ export default async function Dashboard({
             <PiNotebook />
           </span>
           <span className={styles.text}>Menu</span>
-
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/">
           <span className={styles.menu_icon}>
             <LiaEdit />
           </span>
           <span className={styles.text}>Edit</span>
-          
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/create-items">
           <span className={styles.menu_icon}>
             <IoAddSharp />
           </span>
           <span className={styles.text}>Create</span>
-          
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/delete-items">
           <span className={styles.menu_icon}>
@@ -67,7 +64,7 @@ export default async function Dashboard({
           <span className={styles.text}>Delete</span>
         </Link>
       </div>
-      {children}
-    </div>
+      <div className={styles.dashboard_container}>{children}</div>
+    </main>
   );
 }

@@ -30,3 +30,7 @@
 .text {
   display: none;
 }
+
+.dashboard_container {
+  margin-bottom: 84px;
+}

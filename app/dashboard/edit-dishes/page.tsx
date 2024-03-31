@@ -6,7 +6,7 @@ export default async function Page() {
   const dishes = await fetchDishes();
   const categories = await fetchCategories();
   return (
-    <main>
+    <>
       <h1 className={styles.title}>Create</h1>
 
       <div className={styles.container}>
@@ -16,6 +16,6 @@ export default async function Page() {
           </div>
         ))}
       </div>
-    </main>
+    </>
   );
 }

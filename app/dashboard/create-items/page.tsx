@@ -9,13 +9,13 @@ export default async function Page() {
   const dishes = await fetchDishes();
   const categories = await fetchCategories();
   return (
-    <main>
+    <>
       <div className={styles.container}>
         <h1 className={styles.title}>Create</h1>
         <Form dish={"dish"} categories={categories} />
 
         <Form2 dish={"dish"} categories={categories} />
       </div>
-    </main>
+    </>
   );
 }

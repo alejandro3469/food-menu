@@ -11,6 +11,7 @@
   align-items: center;
   background-color: black;
   color: rgb(241, 241, 241);
+  max-width: 48px;
 
   gap: 16px;
 }
@@ -24,6 +25,8 @@
   justify-content: space-evenly;
   background-color: black;
   color: rgb(241, 241, 241);
-
-  width: 100vw;
+  margin: 16px;
+}
+.text {
+  display: none;
 }

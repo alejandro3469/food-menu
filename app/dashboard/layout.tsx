@@ -43,25 +43,28 @@ export default async function Dashboard({
           <span className={styles.menu_icon}>
             <PiNotebook />
           </span>
-          Menu
+          <span className={styles.text}>Menu</span>
+
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/">
           <span className={styles.menu_icon}>
             <LiaEdit />
           </span>
-          Edit
+          <span className={styles.text}>Edit</span>
+          
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/create-items">
           <span className={styles.menu_icon}>
             <IoAddSharp />
           </span>
-          Create
+          <span className={styles.text}>Create</span>
+          
         </Link>
         <Link className={styles.dashboard_link} href="/dashboard/delete-items">
           <span className={styles.menu_icon}>
             <PiTrashSimpleLight />
           </span>
-          Delete
+          <span className={styles.text}>Delete</span>
         </Link>
       </div>
       {children}

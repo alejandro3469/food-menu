@@ -4,7 +4,6 @@ import styles from "@/app/ui/form.module.css";
 import { useState } from "react";
 
 export default async function Page() {
-  const [search, setSearch] = useState("");
 
   const dishes = await fetchDishes();
   const categories = await fetchCategories();

@@ -20,22 +20,10 @@ export default function EditForm({
 
   return (
     <form className={styles.form} action={updateInvoiceWithId}>
-      <label className={styles.label}>
-        Nombre
-      </label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        className={styles.input}
-        placeholder={dish.name}
-        value={dish.name}
-      />
-
+      <span>{dish.name}</span>
       <button className={styles.button} type="submit">
         Eliminar
       </button>
     </form>
   );
 }
-

@@ -10,9 +10,10 @@ export default async function Page() {
   const categories = await fetchCategories();
   return (
     <>
-      <h1 className={styles.title}>Delete</h1>
+      <h1 className={styles.title}>Eliminar</h1>
 
       <div className={styles.container}>
+        <h2>Platillos</h2>
         {dishes.map((dish, index) => (
           <div key={index}>
             <Form dish={dish} categories={categories} />

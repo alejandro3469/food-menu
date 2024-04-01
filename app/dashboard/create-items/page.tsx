@@ -10,12 +10,17 @@ export default async function Page() {
   const categories = await fetchCategories();
   return (
     <>
-      <h1 className={styles.title}>Create</h1>
+      <h1 className={styles.title}>Crear</h1>
 
       <div className={styles.container}>
-        <Form dish={"dish"} categories={categories} />
-
-        <Form2 dish={"dish"} categories={categories} />
+        <div>
+          {"Platillos"}
+          <Form dish={"dish"} categories={categories} />
+        </div>
+        <div>
+          {"Categorias"}
+          <Form2 dish={"dish"} categories={categories} />
+        </div>{" "}
       </div>
     </>
   );

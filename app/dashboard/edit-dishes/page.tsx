@@ -10,7 +10,7 @@ export default async function Page() {
   const categories = await fetchCategories();
   return (
     <>
-      <h1 className={styles.title}>Edit</h1>
+      <h1 className={styles.title}>Editar/Modificar</h1>
 
       <input
         type="text"

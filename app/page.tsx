@@ -18,28 +18,7 @@ export default async function Home() {
   const categories = await fetchCategories();
   return (
     <main>
-      <div>
-        <div>
-          <h3>Dishes</h3>
-          <span>{dishes.length}</span>
-        </div>
-        <div>
-          <h3>Categories</h3>
-          <span>{categories.length}</span>
-        </div>{" "}
-      </div>
-      <Link className="dashboard-link" href="/menu/simple">
-        Menu <BsArrowUpRight />
-      </Link>
-      <Link className="dashboard-link" href="/edit-dishes">
-        Edit Dishes <BsArrowUpRight />
-      </Link>
-      <Link className="dashboard-link" href="/create-items">
-        Create Items <BsArrowUpRight />
-      </Link>
-      <Link className="dashboard-link" href="/delete-items">
-        Delete Items <BsArrowUpRight />
-      </Link>
+      
     </main>
   );
 }

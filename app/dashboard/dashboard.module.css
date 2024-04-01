@@ -34,3 +34,22 @@
 .dashboard_container {
   margin-bottom: 84px;
 }
+
+.active {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px 4px;
+  padding: 16px 32px;
+  font-size: 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  color: rgb(241, 241, 241);
+  max-width: 48px;
+  transition: background-color 0.3s;
+
+  gap: 16px;
+  background-color: #424242;
+}

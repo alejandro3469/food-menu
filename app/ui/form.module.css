@@ -43,3 +43,8 @@
   align-items: baseline;
   padding: 16px;
 }
+
+.delete_input {
+  display: none;
+  visibility: hidden;
+}

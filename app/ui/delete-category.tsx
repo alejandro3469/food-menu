@@ -20,6 +20,14 @@ export default function EditForm({
 
   return (
     <form className={styles.form} action={updateInvoiceWithId}>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        className={styles.delete_input}
+        placeholder={dish.name}
+        value={dish.name}
+      />
       <span>{dish.name}</span>
       <button className={styles.button} type="submit">
         Eliminar

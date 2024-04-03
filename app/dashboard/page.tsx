@@ -37,7 +37,6 @@ export default async function Page({
           dishes.map((dish, index) => (
             <div key={index}>
               <Form dish={dish} categories={categories} />
-              {dish.name}
             </div>
           ))}
       </div>

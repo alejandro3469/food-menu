@@ -21,8 +21,7 @@ export default async function Page({
     <>
       <h1 className={styles.title}>Editar/Modificar</h1>
 
-
-      <Search placeholder="Search invoices..." />
+      <Search placeholder="Busca por nombre" />
 
       <div className={styles.container}>
         {query != "" &&
@@ -31,7 +30,6 @@ export default async function Page({
               dish.name.toLowerCase().indexOf(query.toLowerCase()) != -1 && (
                 <div key={index}>
                   <Form dish={dish} categories={categories} />
-                  
                 </div>
               )
           )}

@@ -18,6 +18,7 @@ import { fetchDishes, fetchCategories } from "@/app/lib/data";
 import { Kalnia } from "next/font/google";
 import Link from "next/link";
 import MenuPage2 from "../MenuPage2";
+import Footer from "../Footer";
 const kalnia = Kalnia({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function Home() {
       <MenuPage2>
         <Menu2 mode={0} />
       </MenuPage2>
+      <Footer />
     </main>
   );
 }

@@ -138,11 +138,18 @@ nav {
   width: 100vw;
 }
 .footer {
-  background-color: #030303;
+  background-color: #131313;
   color: white;
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   border-radius: 24px;
+}
+.footer h3 {
+  font-weight: 600;
+  font-size: 20px;
 }
 .copyright {
   display: flex;
@@ -150,6 +157,8 @@ nav {
   gap: 8px;
   white-space: nowrap;
   color: white;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .searchbar_container {

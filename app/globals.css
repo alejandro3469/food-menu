@@ -134,7 +134,8 @@ nav {
 
 /**FOOTER*/
 .footer_container {
-  padding: 32px;
+  /*padding: 32px;*/
+  margin-top: 32px;
   width: 100vw;
 }
 .footer {

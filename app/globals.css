@@ -138,6 +138,11 @@ nav {
   margin-top: 32px;
   width: 100vw;
 }
+.social_media {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .footer {
   background-color: #212121;
   color: white;

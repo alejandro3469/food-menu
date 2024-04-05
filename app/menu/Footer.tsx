@@ -2,6 +2,9 @@ import React from "react";
 import { FaRegCopyright } from "react-icons/fa6";
 import Link from "next/link";
 import { VscLinkExternal } from "react-icons/vsc";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -11,13 +14,6 @@ export default function Footer() {
           <FaRegCopyright />
           2024 Cocina La Antigua
         </span>
-        <div>
-          <h3>Ponte en contacto con nosotros</h3>
-          <ul>
-            <li>55 0000 0000</li>
-            <li>emailexample@domain.com</li>
-          </ul>
-        </div>
 
         <div>
           <h3>Ubicacion</h3>
@@ -27,6 +23,19 @@ export default function Footer() {
           >
             La antigua, Tultepec <VscLinkExternal />
           </Link>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li className="social_media">
+              <FaWhatsapp />
+              55 0000 0000
+            </li>
+            <li className="social_media">
+              <MdOutlineEmail />
+              emailexample@domain.com
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

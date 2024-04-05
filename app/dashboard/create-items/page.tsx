@@ -14,11 +14,11 @@ export default async function Page() {
 
       <div className={styles.container}>
         <div>
-          {"Platillos"}
+          <h2 className="subtitle1">{"Platillos"}</h2>
           <Form dish={"dish"} categories={categories} />
         </div>
         <div>
-          {"Categorias"}
+          <h2 className="subtitle1">{"Categorias"}</h2>
           <Form2 dish={"dish"} categories={categories} />
         </div>{" "}
       </div>

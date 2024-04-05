@@ -24,7 +24,7 @@ export default async function Page({
       <Search placeholder="Busca por nombre" />
 
       <div className={styles.container}>
-        <h2>Platillos</h2>
+        <h2 className="subtitle1">Platillos</h2>
         {query != "" &&
           dishes.map(
             (dish, index) =>
@@ -42,13 +42,17 @@ export default async function Page({
           ))}
       </div>
       <div className={styles.container}>
-        <h2>Categorias</h2>
+        <h2 className="subtitle1">Categorias</h2>
         {query != "" &&
-          categories.map((category, index) => (
-            category.name.toLowerCase().indexOf(query.toLowerCase()) != -1 && (<div key={index}>
-              <Form2 dish={category} categories={categories} />
-            </div>)
-          ))}
+          categories.map(
+            (category, index) =>
+              category.name.toLowerCase().indexOf(query.toLowerCase()) !=
+                -1 && (
+                <div key={index}>
+                  <Form2 dish={category} categories={categories} />
+                </div>
+              )
+          )}
         {query == "" &&
           categories.map((category, index) => (
             <div key={index}>

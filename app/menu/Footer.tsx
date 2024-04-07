@@ -12,16 +12,16 @@ export default function Footer() {
       <div className="footer">
         <span className="copyright">
           <FaRegCopyright />
-          2024 Cocina La Antigua
+          2024 La Casa de las Gargolas
         </span>
 
         <div>
           <h3>Ubicacion</h3>
           <Link
             className="maps_location"
-            href={"https://maps.app.goo.gl/zVqB5uGK3w6hRzBe9"}
+            href={"https://www.bing.com/maps?osid=378f16d9-ecd2-4bc2-92fb-13d175f0ea44&cp=19.632796~-99.10949&lvl=17&pi=0&imgid=27f93bed-8e5b-4237-8cd3-a8106e209a08&v=2&sV=2&form=S00027"}
           >
-            La antigua, Tultepec <VscLinkExternal />
+            Ixtlememelixtle, Coacalco de Berriozabal <VscLinkExternal />
           </Link>
         </div>
         <div>
@@ -37,6 +37,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        
       </div>
     </footer>
   );

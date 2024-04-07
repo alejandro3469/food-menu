@@ -19,7 +19,7 @@ export default function Footer() {
           <h3>Ubicacion</h3>
           <Link
             className="maps_location"
-            href={"https://www.bing.com/maps?osid=378f16d9-ecd2-4bc2-92fb-13d175f0ea44&cp=19.632796~-99.10949&lvl=17&pi=0&imgid=27f93bed-8e5b-4237-8cd3-a8106e209a08&v=2&sV=2&form=S00027"}
+            href={"https://maps.app.goo.gl/7RXzTT1EUKdc6Bwp7"}
           >
             Ixtlememelixtle, Coacalco de Berriozabal <VscLinkExternal />
           </Link>

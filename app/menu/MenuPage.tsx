@@ -11,6 +11,8 @@ import React from "react";
 import Menu from "./Menu";
 import { IoImageSharp } from "react-icons/io5";
 import { TbListDetails } from "react-icons/tb";
+import { GiGargoyle } from "react-icons/gi";
+
 
 const nunito = Roboto({ weight: "300", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
@@ -51,7 +53,9 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
   <h2 className={`${kalnia.className} h2`}>Menu</h2>*/}
       <h1 className={kalnia.className}>
         Cocina La Antigua{" "}
-        <Image src="/logo.png" width={500} height={500} alt="Restaurant logo" />
+        {/*<Image src="/logo.png" width={500} height={500} alt="Restaurant logo" />*/}
+        <GiGargoyle />
+
       </h1>
       <Link className="menu_presentation" href={"./simple"}>
         <TbListDetails />

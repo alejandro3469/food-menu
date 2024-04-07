@@ -10,6 +10,7 @@ import { VscLinkExternal } from "react-icons/vsc";
 import React from "react";
 import Menu from "./Menu";
 import { IoImageSharp } from "react-icons/io5";
+import { GiGargoyle } from "react-icons/gi";
 
 const nunito = Roboto({ weight: "300", subsets: ["latin"] });
 const playfairdisplay = Playfair_Display({
@@ -49,8 +50,9 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
       </div>
       <h2 className={`${kalnia.className} h2`}>Menu</h2>*/}
       <h1 className={kalnia.className}>
-        Cocina La Antigua{" "}
-        <Image src="/tray.png" width={80} height={80} alt="Restaurant logo" />
+        La Casa de las Gargolas{" "}
+        {/*<Image src="/logo.png" width={500} height={500} alt="Restaurant logo" />*/}
+        <GiGargoyle className="logo_icon" />
       </h1>
 
       <Link className="menu_presentation" href={"./images"}>

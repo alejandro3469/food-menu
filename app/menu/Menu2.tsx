@@ -29,13 +29,13 @@ export default async function Menu({ mode }: { mode: any }) {
   return (
     <span className={nunito.className}>
       <>
-        {/* <div className="cats_nav">
+        {<div className="cats_nav">
           {categories.map((category, index) => (
             <a key={index} href={`#${category.name}`}>
               {category.name}
             </a>
           ))}
-          </div>*/}
+          </div>}
         <div className="lists">
           {categories.map((category, index) => (
             <List2 key={index} title={category.name} category={dishes} />

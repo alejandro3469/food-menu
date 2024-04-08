@@ -7,8 +7,8 @@ import { Roboto } from "next/font/google";
 const roboto = Roboto({ weight: ["100", "300", "400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cocina La Antigua",
-  description: "Mariscos y gastronomia mexicana",
+  title: "La Calsa de las Gargolas",
+  description: "Bar",
 };
 
 export default function RootLayout({

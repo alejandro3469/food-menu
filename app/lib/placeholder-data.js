@@ -640,7 +640,7 @@ const dishes = [
     sizes: [{ name: "", prize: "$.00" }],
     image: "/bread.jpg",
     description: "",
-    available: "available",
+    available: "unavailable",
   },
 ];
 

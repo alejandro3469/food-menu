@@ -5,6 +5,9 @@ import { VscLinkExternal } from "react-icons/vsc";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -34,6 +37,23 @@ export default function Footer() {
             <li className="social_media">
               <MdOutlineEmail />
               emailexample@domain.com
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Redes sociales</h3>
+          <ul>
+            <li className="social_media">
+              <FaInstagram />
+              casagargolasbar
+            </li>
+            <li className="social_media">
+              <FaFacebook />
+              La Casa de Las Gargolas
+            </li>
+            <li className="social_media">
+              <FaTiktok />
+              casagargolasbar
             </li>
           </ul>
         </div>

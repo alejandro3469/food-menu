@@ -158,14 +158,20 @@ nav {
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 
   /*border-top-left-radius: 24px;
   border-top-right-radius: 24px;*/
 }
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .footer h3 {
   font-weight: 600;
   font-size: 20px;
+  margin-bottom: 4px;
 }
 .copyright {
   display: flex;

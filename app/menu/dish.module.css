@@ -71,7 +71,6 @@
   font-weight: 600;
   display: flex;
   gap: 8px;
-  white-space: nowrap;
 }
 .desctiption_simple {
   width: 240px;

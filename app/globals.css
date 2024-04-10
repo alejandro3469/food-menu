@@ -40,6 +40,9 @@ html {
   display: flex;
   position: sticky;
   top: 0;
+  left: 0;
+  overscroll-behavior-y: contain;
+  top: 0;
   width: 100vw;
   align-items: center;
   font-size: 16px;
@@ -58,9 +61,12 @@ html {
   border-right: none;
   white-space: nowrap;
 }
-.cats_nav a:first-child {
+.cats_nav a:hover{
   padding: 12px 16px;
-  background-color: #f8f8f8;
+  background-color: #ededed;
+}
+
+.cats_nav a:first-child {
   border-left: none;
   border-right: none;
   white-space: nowrap;

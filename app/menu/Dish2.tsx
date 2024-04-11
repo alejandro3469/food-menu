@@ -26,7 +26,7 @@ export default function Dish({
         <div className={styles.name_des}>
           {" "}
           <h3 className={styles.name_simple}>{name} {available == "available" ?  <span className={styles.available}><span className={styles.circle}></span> Disponible</span> : <span className={styles.available}><span className={styles.circle_red}></span> Agotado</span>}</h3>
-          <p className={styles.desctiption_simple}>{description}</p>
+          {description != ""  && <p className={styles.desctiption_simple}>{description}</p>}
         </div>
         <div className={styles.prize_simple}>
           {sizes && <>{sizes.replace(/,/g, "\r\n")}</>}

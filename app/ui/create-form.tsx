@@ -55,7 +55,6 @@ export default function EditForm({
         placeholder={""}
       />
 
-   
       <button className={styles.button} type="submit">
         Guardar
       </button>

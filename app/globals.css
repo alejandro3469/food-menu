@@ -110,6 +110,7 @@ main {
   max-width: 100vw;
   overflow-x: hidden;
   /*background-color: rgb(241, 235, 235);*/
+  /*background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=15&opacity=15)*/
 }
 
 h1 {

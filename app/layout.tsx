@@ -8,7 +8,7 @@ const roboto = Roboto({ weight: ["100", "300", "400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "La Calsa de las Gargolas",
-  description: "Bar",
+  description: "Restaurante bar",
 };
 
 export default function RootLayout({
@@ -18,6 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta property="og:image" content="/gargoyleshouse1.jpg" />
+
       <body>{children}</body>
     </html>
   );

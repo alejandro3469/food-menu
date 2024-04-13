@@ -97,6 +97,7 @@
   height: 8px;
   border-radius: 8px;
   background-color: #00e67798;
+  opacity: 0.9;
 }
 
 .circle_red {
@@ -104,4 +105,5 @@
   height: 8px;
   border-radius: 8px;
   background-color: #ff1745b7;
+  opacity: 0.9;
 }

@@ -8,18 +8,10 @@
   max-width: 100vw;
   overflow-x: scroll;
   padding: 16px 16px 16px 16px;
+  position: relative;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-transform: uppercase;
-}
+
 .icon_title {
   display: flex;
   align-items: center;
@@ -53,7 +45,6 @@
   gap: 16px;
   width: 100%;
   max-width: 100vw;
-  overflow-x: scroll;
   padding: 16px 32px 16px 32px;
   margin-top: 16px;
 
@@ -63,4 +54,13 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-align: center;
+  text-transform: uppercase;
+  /*position: sticky;
+  top: 0px;*/
 }

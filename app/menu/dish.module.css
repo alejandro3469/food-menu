@@ -79,14 +79,18 @@
   font-size: 14px;
 }
 
+.container_simple:hover .available {
+  color: #bab9b9;
+  transition: color 0.3s;
+}
 .available {
   display: flex;
   align-items: center;
   gap: 4px;
   font-size: 12px;
   font-weight: 500;
-  color: rgb(0, 0, 0);
-  color: #e8e8e8;
+  color: transparent;
+  transition: color 0.3s;
 }
 .circle {
   width: 8px;

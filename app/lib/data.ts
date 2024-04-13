@@ -44,7 +44,7 @@ export async function fetchDishById(id: string) {
         dishes.sizes,
         dishes.description
       FROM dishes
-      WHERE dishes.id = ${id};
+      WHERE dishes.name = ${id};
     `;
 
     const invoice = data.rows;

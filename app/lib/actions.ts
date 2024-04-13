@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
+
 const FormSchema = z.object({
   id: z.string(),
   dishId: z.string(),
@@ -135,7 +136,7 @@ export async function deleteCategory2(formData: FormData) {
 const UpdateDish = FormSchema.omit({ id: true, date: true });
 export async function updateDish(id: string, formData: FormData) {
   const { dishId, name, category, image, description } = UpdateDish.parse({
-    dishId: formData.get('name'),
+    dishId: formData.get('idd'),
     name: formData.get('name'),
     category: formData.get('category'),
     image: formData.get('name'),
@@ -154,7 +155,11 @@ export async function updateDish(id: string, formData: FormData) {
     unavailable = sizesSchema.parse(formData.get('unavailable'));
   }
 
-  if (name == '') {
+  const precios2 = sizesSchema.parse(formData.get('precios2'));
+
+
+
+  if (name == dishId) {
     console.log('lol')
   } else {
     await sql`
@@ -181,7 +186,7 @@ export async function updateDish(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   }
-  if (size1 == '') {
+  if (size1 == precios2) {
     console.log(`${id} HMMMM`)
   } else {
     await sql`

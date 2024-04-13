@@ -24,7 +24,7 @@
   padding: 8px;
 }
 .input::placeholder {
-  color: black;
+  color: rgb(173, 173, 173);
   opacity: 1;
 }
 .button {
@@ -47,4 +47,7 @@
 .delete_input {
   display: none;
   visibility: hidden;
+}
+.invisible {
+  display: none;
 }

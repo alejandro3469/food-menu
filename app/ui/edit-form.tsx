@@ -18,6 +18,14 @@ export default function EditForm({
 
   return (
     <form className={styles.form} action={updateInvoiceWithId}>
+      <input
+        id="idd"
+        name="idd"
+        type="text"
+        className={styles.invisible}
+        placeholder={''}
+        value={dish.name}
+      />
       <label className={styles.label}>
         Nombre
       </label>
@@ -26,7 +34,8 @@ export default function EditForm({
         name="name"
         type="text"
         className={styles.input}
-        placeholder={dish.name}
+        placeholder={''}
+        defaultValue={dish.name}
       />
 
       <label className={styles.label}>
@@ -49,11 +58,20 @@ export default function EditForm({
         Precios
       </label>
       <input
+        id="precios2"
+        name="precios2"
+        type="text"
+        className={styles.invisible}
+        placeholder={''}
+        value={dish.sizes}
+      />
+      <input
         id="size1"
         name="size1"
         type="text"
         className={styles.input}
-        placeholder={dish.sizes}
+        placeholder={""}
+        defaultValue={dish.sizes}
       />
 
       <label className={styles.label}>
@@ -63,8 +81,10 @@ export default function EditForm({
         id="description"
         name="description"
         className={styles.input}
-        placeholder={dish.description}
+        placeholder={dish.description == "" ? "Articulo sin descripcion" : ""}
+        defaultValue={dish.description}
       />
+      
 
       <div>
         <input

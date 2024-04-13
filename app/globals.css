@@ -62,10 +62,9 @@ html {
   border-right: none;
   white-space: nowrap;
 }
-.cats_nav a:hover{
+.cats_nav a:hover {
   background-color: #ededed;
 }
-
 .cats_nav a:first-child {
   border-left: none;
   border-right: none;
@@ -87,10 +86,10 @@ html {
 .subtitle1 {
   font-weight: 500;
   font-size: 18px;
-} 
+}
 .schedule {
   /*border: 1px solid #7f7f7f;*/
-  
+
   max-width: 230px;
   align-self: center;
   margin: auto;

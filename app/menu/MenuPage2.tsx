@@ -49,11 +49,18 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <h2 className={`${kalnia.className} h2`}>Menu</h2>*/}
-      <div>
+      <div className="bannnner">
+
         <h1 className={kalnia.className}>
           La Casa de las Gargolas{" "}
+          <Image
+            alt={"restaurant"}
+            src={"/gargoyleshouse1.jpg"}
+            width={400}
+            height={200}
+          />{" "}
           {/*<Image src="/logo.png" width={500} height={500} alt="Restaurant logo" />*/}
-          <GiGargoyle className="logo_icon" />
+          {/*<GiGargoyle className="logo_icon" />*/}
         </h1>
         <div className="schedule">Abierto de Lunes a Sabado de 10:00am a 11:00pm</div>
       </div>

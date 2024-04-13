@@ -24,7 +24,7 @@
   padding: 8px;
 }
 .input::placeholder {
-  color: rgb(173, 173, 173);
+  color: rgb(184, 184, 184);
   opacity: 1;
 }
 .button {

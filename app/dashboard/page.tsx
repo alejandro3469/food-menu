@@ -21,7 +21,7 @@ export default async function Page({
     <>
       <h1 className={styles.title}>Editar/Modificar</h1>
 
-      <Search placeholder="Busca por nombre" />
+      <Search placeholder="Buscar" />
 
       <div className={styles.container}>
         {query != "" &&

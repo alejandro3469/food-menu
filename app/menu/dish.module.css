@@ -68,6 +68,11 @@
   font-size: 16px;
   font-weight: 600;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 8px;
+
 }
 .name_simple {
   font-weight: 600;
@@ -77,7 +82,7 @@
 .desctiption_simple {
   width: 240px;
   font-weight: 500;
-  color: #858585;
+  color: #464545;
   font-size: 14px;
 }
 
@@ -91,8 +96,9 @@
   gap: 4px;
   font-size: 12px;
   font-weight: 500;
-  color: transparent;
+  /*color: transparent;*/
   transition: color 0.3s;
+  color: #00BFA5;
 }
 .circle {
   width: 8px;
@@ -100,6 +106,7 @@
   border-radius: 8px;
   background-color: #00e67798;
   opacity: 0.9;
+  display: none;
 }
 
 .circle_red {
@@ -108,4 +115,5 @@
   border-radius: 8px;
   background-color: #ff1745b7;
   opacity: 0.9;
+  display: none;
 }

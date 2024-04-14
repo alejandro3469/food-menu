@@ -40,7 +40,7 @@ export default function Dish({
             <span className={styles.circle}></span> Disponible
           </span>
         ) : (
-          <span className={styles.available}>
+          <span className={styles.available_red}>
             <span className={styles.circle_red}></span> Agotado
           </span>
         )}

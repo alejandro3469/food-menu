@@ -86,10 +86,10 @@
   font-size: 14px;
 }
 
-.container_simple:hover .available {
+/*.container_simple:hover .available {
   color: #bab9b9;
   transition: color 0.3s;
-}
+}*/
 .available {
   display: flex;
   align-items: center;
@@ -99,6 +99,16 @@
   /*color: transparent;*/
   transition: color 0.3s;
   color: #00BFA5;
+}
+.available_red {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  /*color: transparent;*/
+  transition: color 0.3s;
+  color: #D50000;
 }
 .circle {
   width: 8px;

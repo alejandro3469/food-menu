@@ -54,7 +54,6 @@ html {
   width: 100%;
   gap: 8px;
 
-  margin-top: 8px;
   overflow-x: scroll;
 }
 .cats_nav a {
@@ -81,7 +80,6 @@ html {
 /*.cats_nav a:hover {
 }*/
 .lists {
-  margin-top: 16px;
   display: flex;
   flex-direction: column;
   position: relative;

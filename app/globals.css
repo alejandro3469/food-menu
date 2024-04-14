@@ -37,6 +37,7 @@ html {
 .bannnner {
   /*display: none;*/
   position: relative;
+  display: none;
 }
 .banner_imagee {
   position: absolute;
@@ -63,6 +64,9 @@ html {
   font-weight: 400;
   width: 100%;
   gap: 8px;
+  background-image: url("/paper.png");
+  background-repeat: repeat;
+  background-size: contain;
 
   overflow-x: scroll;
 }
@@ -76,8 +80,8 @@ html {
   font-weight: 500;
 }
 .cats_nav a:hover {
-  background-color: #ebebeb;
-  border: 1px solid #ebebeb;
+  background-color: #b6b6b62f;
+  border: 1px solid #b6b6b62f;
 }
 .logo_icon {
   font-size: 32px;
@@ -90,6 +94,7 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding-bottom: 48px;
 }
 .subtitle1 {
   font-weight: 500;
@@ -177,7 +182,6 @@ nav {
 /**FOOTER*/
 .footer_container {
   /*padding: 32px;*/
-  margin-top: 32px;
   width: 100vw;
 }
 .social_media {

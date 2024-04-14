@@ -181,7 +181,7 @@ nav {
 .footer {
   background-color: #1c1c1c;
   color: white;
-  padding: 32px;
+  padding: 40px 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;

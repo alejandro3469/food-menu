@@ -58,6 +58,7 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
             src={"/gargoyleshouse1.jpg"}
             width={400}
             height={200}
+            className="banner_imagee"
           />{" "}
           {/*<Image src="/logo.png" width={500} height={500} alt="Restaurant logo" />*/}
           {/*<GiGargoyle className="logo_icon" />*/}

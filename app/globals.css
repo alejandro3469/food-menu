@@ -30,6 +30,11 @@ html {
   margin-top: 16px;
 }
 .bannnner {
+  /*display: none;*/
+  position: relative;
+}
+.banner_imagee {
+  position: absolute;
   display: none;
 }
 .maps_location {

@@ -10,6 +10,11 @@
   margin: 0;
   padding: 0;
 }
+.lists {
+  background-image: url("/paper.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
 main {
   max-width: 600px;
 }

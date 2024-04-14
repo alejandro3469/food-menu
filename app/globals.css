@@ -65,15 +65,14 @@ html {
   padding: 8px 24px;
   /*background-color: #fbfbfb;*/
   border-radius: 8px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #ebebeb;
   /*border-left: 1px solid #e4e4e4;*/
   white-space: nowrap;
   font-weight: 500;
 }
 .cats_nav a:hover {
-  background-color: black;
-  border: 1px solid black;
-  color: white;
+  background-color: #ebebeb;
+  border: 1px solid #ebebeb;
 }
 .logo_icon {
   font-size: 32px;

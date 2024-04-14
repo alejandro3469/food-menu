@@ -29,6 +29,9 @@ html {
 .bannerimage {
   margin-top: 16px;
 }
+.bannnner {
+  display: none;
+}
 .maps_location {
   display: flex;
   align-items: center;

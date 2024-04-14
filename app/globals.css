@@ -42,7 +42,7 @@ html {
 }
 
 .cats_nav {
-  padding: 0 32px;
+  padding: 4px 32px;
   display: flex;
   overscroll-behavior-y: contain;
   top: 0;
@@ -59,20 +59,14 @@ html {
 .cats_nav a {
   padding: 8px 24px;
   /*background-color: #fbfbfb;*/
-  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  border: 1px solid #cdcdcd;
   /*border-left: 1px solid #e4e4e4;*/
-  border-radius: 16px;
-  border-right: none;
   white-space: nowrap;
   font-weight: 500;
 }
 .cats_nav a:hover {
   background-color: #ededed;
-}
-.cats_nav a:first-child {
-  border-left: none;
-  border-right: none;
-  white-space: nowrap;
 }
 .logo_icon {
   font-size: 32px;

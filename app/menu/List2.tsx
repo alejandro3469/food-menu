@@ -22,6 +22,8 @@ import { LuCakeSlice } from "react-icons/lu";
 import { MdOutlineLocalDrink } from "react-icons/md";
 import { MdOutlineEmojiFoodBeverage } from "react-icons/md";
 import { LuSoup } from "react-icons/lu";
+import { MdOutlineChevronRight } from "react-icons/md";
+
 
 export default function List({
   title,
@@ -43,7 +45,7 @@ export default function List({
           {title}
         </span>{" "}
   <span className={styles.items}>{"(4 platillos)"}</span>*/}
-        {title}
+        {title} <MdOutlineChevronRight />
       </h3>
       <ul>
         {category.map(

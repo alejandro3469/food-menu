@@ -41,9 +41,6 @@ html {
 .cats_nav {
   padding: 0 32px;
   display: flex;
-  position: sticky;
-  top: 0;
-  left: 0;
   overscroll-behavior-y: contain;
   top: 0;
   width: 100vw;
@@ -104,13 +101,11 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 main {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
-  overflow-x: hidden;
   /*background-color: rgb(241, 235, 235);*/
   /*background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=15&opacity=15)*/
 }

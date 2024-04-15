@@ -11,12 +11,15 @@
   padding: 0;
 }
 .lists {
-  background-image: url("/paper.png");
+  /*background-image: url("/paper.png");
   background-repeat: repeat;
-  background-size: contain;
+  background-size: contain;*/
 }
 main {
   max-width: 600px;
+  background-image: url("/paper.png");
+  background-repeat: repeat;
+  background-size: contain;
 }
 ::placeholder {
   color: black;
@@ -37,7 +40,6 @@ html {
 .bannnner {
   /*display: none;*/
   position: relative;
-  display: none;
 }
 .banner_imagee {
   position: absolute;
@@ -183,6 +185,8 @@ nav {
 .footer_container {
   /*padding: 32px;*/
   width: 100vw;
+  position: sticky;
+  top: 0;
 }
 .social_media {
   display: flex;

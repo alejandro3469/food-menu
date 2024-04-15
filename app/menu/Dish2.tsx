@@ -28,6 +28,9 @@ export default function Dish({
         {description != "" && (
           <p className={styles.desctiption_simple}>{description}</p>
         )}
+        {description == "" && (
+          <p className={styles.desctiption_simple}>{"-"}</p>
+        )}
       </div>
       <div className={styles.prize_simple}>
         <span>{sizes && <>{sizes.replace(/,/g, "\r\n")}</>}</span>

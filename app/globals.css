@@ -66,9 +66,9 @@ html {
   font-weight: 400;
   width: 100%;
   gap: 8px;
-  background-image: url("/paper.png");
+  /*background-image: url("/paper.png");
   background-repeat: repeat;
-  background-size: contain;
+  background-size: contain;*/
 
   overflow-x: scroll;
 }

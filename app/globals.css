@@ -80,6 +80,15 @@ html {
 
   overflow-x: scroll;
 }
+.banner_dark {
+  background-color: black;
+  opacity: 0.3;
+  top: 0;
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+  z-index: 500;
+}
 .cats_nav a {
   padding: 8px 24px;
   /*background-color: #fbfbfb;*/
@@ -142,6 +151,12 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  z-index: 800;
+}
+.titleeeee {
+  z-index: 900;
+  position: absolute;
+  top: 0;
 }
 .h2 {
   font-size: 28px;

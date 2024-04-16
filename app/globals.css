@@ -122,12 +122,10 @@ html {
 .schedule {
   /*border: 1px solid #7f7f7f;*/
 
-  max-width: 230px;
-  align-self: center;
-  margin: auto;
+  max-width: 280px;
   margin-bottom: 32px;
-  padding: 16px;
-  text-align: center;
+  padding: 0 32px;
+  text-align: left;
 }
 body {
   display: flex;
@@ -144,8 +142,8 @@ main {
 
 h1 {
   font-size: 32px;
-  text-align: center;
-  padding: 32px 0;
+  text-align: left;
+  padding: 32px 32px;
   margin-top: 32px;
   display: flex;
   flex-direction: column;

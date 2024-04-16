@@ -40,7 +40,7 @@ html {
 .bannnner {
   /*display: none;*/
   position: relative;
-  height: 70vh;
+  height: 40vh;
   align-items: end;
   align-content: end;
   background-image: url("/gargoyleshouse1.jpg");
@@ -85,7 +85,7 @@ html {
   opacity: 0.3;
   top: 0;
   position: absolute;
-  height: 70vh;
+  height: 40vh;
   width: 100vw;
   z-index: 500;
 }
@@ -154,7 +154,7 @@ h1 {
 .titleeeee {
   z-index: 900;
   position: absolute;
-  height: 70vh;
+  height: 40vh;
   text-align: end;
   align-content: end;
   top: 0;

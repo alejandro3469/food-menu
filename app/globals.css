@@ -156,6 +156,9 @@ h1 {
 .titleeeee {
   z-index: 900;
   position: absolute;
+  height: 70vh;
+  text-align: end;
+  align-content: end;
   top: 0;
 }
 .h2 {

@@ -26,7 +26,7 @@ async function seedUsers(client) {
       dishes.map(async (dish) => {
         return client.sql`
         INSERT INTO dishes (id, name, category, sizes, image, description, available)
-        VALUES (DEFAULT, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.name}, ${dish.description}, ${dish.available});
+        VALUES (DEFAULT, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.item}, ${dish.description}, ${dish.available});
       `;
       })
     );

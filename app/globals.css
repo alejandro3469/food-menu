@@ -19,7 +19,7 @@ main {
   max-width: 600px;
   background-image: url("/paper.png");
   background-repeat: repeat;
-  background-size: contain;
+  background-size: 300px 500px;
 }
 ::placeholder {
   color: black;

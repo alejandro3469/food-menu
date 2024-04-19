@@ -9,11 +9,11 @@ async function seedUsers(client) {
     // Create the "users" table if it doesn't exist
     const createTable = await client.sql`
       CREATE TABLE IF NOT EXISTS dishes (
-        id TEXT NOT NULL,
+        id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         category TEXT NOT NULL,
         sizes TEXT NOT NULL,
-        image TEXT NOT NULL,
+        image TEXT,
         description TEXT NOT NULL,
         available TEXT NOT NULL
       );
@@ -26,7 +26,7 @@ async function seedUsers(client) {
       dishes.map(async (dish) => {
         return client.sql`
         INSERT INTO dishes (id, name, category, sizes, image, description, available)
-        VALUES (${dish.id}, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.image}, ${dish.description}, ${dish.available});
+        VALUES (DEFAULT, ${dish.item}, ${dish.category}, ${`${dish.sizes[0].name} ${dish.sizes[0].prize}`}, ${dish.name}, ${dish.description}, ${dish.available});
       `;
       })
     );
@@ -50,7 +50,7 @@ async function seedCategories(client) {
     // Create the "users" table if it doesn't exist
     const createTable = await client.sql`
       CREATE TABLE IF NOT EXISTS categories (
-        id TEXT NOT NULL,
+        id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL
       );
     `;
@@ -62,7 +62,7 @@ async function seedCategories(client) {
       categories.map(async (category) => {
         return client.sql`
         INSERT INTO categories (id, name)
-        VALUES (${category.id}, ${category.name});
+        VALUES (DEFAULT, ${category.name});
       `;
       })
     );

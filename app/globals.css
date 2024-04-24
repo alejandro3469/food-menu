@@ -17,6 +17,9 @@
 }
 main {
   max-width: 600px;
+  
+}
+.menuuu {
   background-image: url("/paper.png");
   background-repeat: repeat;
   background-size: 300px 500px;

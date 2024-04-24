@@ -44,7 +44,7 @@ export default function Dashboard({
           </div>{" "}
         </div>*/}
 
-        <Link className={`${styles.dashboard_link}`} href="/menu/simple">
+        <Link className={`${styles.dashboard_link}`} href="/la-casa-de-las-gargolas">
           <span className={styles.menu_icon}>
             <PiNotebook />
           </span>
@@ -52,11 +52,11 @@ export default function Dashboard({
         </Link>
         <Link
           className={`${
-            pathname.toString() != "/dashboard"
+            pathname.toString() != "/la-casa-de-las-gargolas/dashboard"
               ? styles.dashboard_link
               : styles.active
           }`}
-          href="/dashboard/"
+          href="/la-casa-de-las-gargolas/dashboard/"
         >
           <span className={styles.menu_icon}>
             <LiaEdit />
@@ -64,20 +64,20 @@ export default function Dashboard({
           <span className={styles.text}>Edit</span>
         </Link>
         <Link className={`${
-            pathname.toString() != "/dashboard/create-items"
+            pathname.toString() != "/la-casa-de-las-gargolas/dashboard/create-items"
               ? styles.dashboard_link
               : styles.active
-          }`} href="/dashboard/create-items">
+          }`} href="/la-casa-de-las-gargolas/dashboard/create-items">
           <span className={styles.menu_icon}>
             <IoAddSharp />
           </span>
           <span className={styles.text}>Create</span>
         </Link>
         <Link  className={`${
-            pathname.toString() != "/dashboard/delete-items"
+            pathname.toString() != "/la-casa-de-las-gargolas/dashboard/delete-items"
               ? styles.dashboard_link
               : styles.active
-          }`} href="/dashboard/delete-items">
+          }`} href="/la-casa-de-las-gargolas/dashboard/delete-items">
           <span className={styles.menu_icon}>
             <PiTrashSimpleLight />
           </span>

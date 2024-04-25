@@ -66,7 +66,7 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
             {/*<GiGargoyle className="logo_icon" />*/}
           </h1>
           <div className="schedule">
-            Abierto de Lunes a Sabado de 10:00am a 11:00pm
+            {"Mie. y Jue. de 2:00pm a 10:pm, \n Vie. y Sab. de 2:00pm a 2:00am, \n Dom. de 11:00am a 9:00pm"}
           </div>
         </div>
       </div>

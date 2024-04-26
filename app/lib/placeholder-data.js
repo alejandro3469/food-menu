@@ -89,7 +89,7 @@ const dishes = [
 
   {
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c70",
-    item: "Tablon de carnes",
+    item: "Tablón de carnes",
     category: categories[0].name,
     sizes: [{ name: "", prize: "$237.00" }],
     image: "/tostada.jpg",
@@ -99,7 +99,7 @@ const dishes = [
   },
   {
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c71",
-    item: "Tablon de quesos",
+    item: "Tablón de quesos",
     category: categories[0].name,
     sizes: [{ name: "", prize: "$187.00" }],
     image: "/caldo2.jpg",
@@ -109,9 +109,9 @@ const dishes = [
   },
   {
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c72",
-    item: "Tablon mixto",
+    item: "Tablón mixto",
     category: categories[0].name,
-    sizes: [{ name: "", prize: "$ 287.00" }],
+    sizes: [{ name: "", prize: "$287.00" }],
     image: "/water.jpg",
     description: "Delicia culinaria que fusiona quesos y carnes frias",
     available: "available",
@@ -120,7 +120,7 @@ const dishes = [
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c73",
     item: "Arrachera",
     category: categories[1].name,
-    sizes: [{ name: "", prize: "$ 99.00" }],
+    sizes: [{ name: "", prize: "$99.00" }],
     image: "/coke.jpg",
     description: "",
     available: "available",
@@ -129,7 +129,7 @@ const dishes = [
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c74",
     item: "Pollo",
     category: categories[1].name,
-    sizes: [{ name: "", prize: "$ 99.00" }],
+    sizes: [{ name: "", prize: "$99.00" }],
     image: "/coffee.jpg",
     description: "",
     available: "available",
@@ -138,7 +138,7 @@ const dishes = [
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c75",
     item: "Chorizo",
     category: categories[1].name,
-    sizes: [{ name: "", prize: "$ 99.00" }],
+    sizes: [{ name: "", prize: "$99.00" }],
     image: "/tea.jpg",
     description: "",
     available: "available",
@@ -632,8 +632,9 @@ const dishes = [
     image: "/bread.jpg",
     description: "Orden de tres",
     available: "available",
-  },//-----
-  {
+  },
+  //-----
+  /*{
     id: "126eed9c-c90c-4ef6-a4a8-fcf7408d3c79",
     item: "",
     category: categories[11].name,
@@ -641,7 +642,7 @@ const dishes = [
     image: "/bread.jpg",
     description: "",
     available: "unavailable",
-  },
+  },*/
 ];
 
 module.exports = {

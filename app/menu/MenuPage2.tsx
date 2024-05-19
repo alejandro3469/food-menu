@@ -57,7 +57,7 @@ export default function MenuPage({ children }: { children: React.ReactNode }) {
             La Casa de las Gargolas{" "}
             <Image
               alt={"restaurant"}
-              src={"/gargoyleshouse1.jpg"}
+              src={"/t1.jpg"}
               width={400}
               height={200}
               className="banner_imagee"
